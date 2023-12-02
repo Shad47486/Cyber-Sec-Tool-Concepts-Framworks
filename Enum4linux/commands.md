@@ -19,4 +19,8 @@ enum4linux [Command] [Target-ip]
 
 -v = Verbose Mode, shows the underlying commands being excuted by enum4linux
 
+-r = Pulls Usernames from the default RID range (500-550, 1000-1500)
+
+
+
 ## If youve managaed to obtain credentianls of usernames and passwords what Commands can u use? 
