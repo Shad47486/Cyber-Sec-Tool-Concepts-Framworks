@@ -1,0 +1,1 @@
+./kerbrute userenum -dc CONTROLLER.local -d CONTROLLER.local userlist.txt
