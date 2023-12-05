@@ -10,5 +10,3 @@ git clone https://github.com/volatilityfoundation/volatility3.git
 Can test using:
     - python3 vol.py -h
       -  paremeter -h = help
-
-
