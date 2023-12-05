@@ -31,7 +31,7 @@ os.psscan
 
 os.pstree
     - List all process based on their parent process ID, using the same method as .pslist
-      - Usefule for analyst to geta full story during the time of extraction.
+      - Useful for analyst to geta full story during the time of extraction.
 
 os.netstat
     - identify the network connection present at the time of extraction on the host machine
