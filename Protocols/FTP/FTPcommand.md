@@ -3,7 +3,7 @@
 ## Syntax: 
 FTP [commands] 
     - Example: 
-        FTP <target ip> -U svc-admin
+        FTP <target ip> -U anonymous
 
 ## Parameters/Commands: 
 - L 
