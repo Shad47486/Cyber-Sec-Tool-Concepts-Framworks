@@ -32,8 +32,25 @@
 - grep 
   -  
 
+- egrep
+  - searchs a given data set of data and print every line which contains a given pattern. Like "find word" in browser Example: egrep 'word' path
+
 - awk 
 
 - echo [file]
 
-- 
+- checksec
+  - tells you security information about a file.
+
+- whois 
+  - Allows you to query who a domain name is registered to. 
+    - Syntax: 
+      - whois <domain>
+
+- dig 
+  - Allows us to manually query recursive DNS servers of our choice for information about domains: 
+  - Syntax: 
+    - dig <domain> @<dns-server-ip>
+
+- find
+  - Helpful to find a specific file in the linux terminal
