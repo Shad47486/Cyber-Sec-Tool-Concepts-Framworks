@@ -66,10 +66,10 @@ Operand (|)
   - To pass the output of the strings command to another command for further processing.
     - EX: strings filename | grep 'search_term'
 
-Operand (>)
-  - to store the output in a file, overwriting the file if it already exists
+Redriect Operand (>)
+  - To store the output in a file, overwriting the file if it already exists
     - EX: strings filename > output.txt or path to file
 
-Opernad (>>)
-  - to append the output to a file, creating the file if it doesn't exist, or adding to it if it does
+Redriect Operand (>>)
+  - To append the output to a file, creating the file if it doesn't exist, or adding to it if it does
     -  EX: strings filename >> output.txt
