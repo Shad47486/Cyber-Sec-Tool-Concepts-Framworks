@@ -31,9 +31,11 @@
 
 - grep 
   -  
+    - Used with the pipe operand
 
 - egrep
   - searchs a given data set of data and print every line which contains a given pattern. Like "find word" in browser Example: egrep 'word' path
+    - Used with the pipe operand
 
 - awk 
 
@@ -54,3 +56,20 @@
 
 - find
   - Helpful to find a specific file in the linux terminal
+
+
+# Pipe Operand:
+  - Transfer of standard output to some other destination
+    * Form of redirection
+
+Operand (|)
+  - To pass the output of the strings command to another command for further processing.
+    - EX: strings filename | grep 'search_term'
+
+Operand (>)
+  - to store the output in a file, overwriting the file if it already exists
+    - EX: strings filename > output.txt or path to file
+
+Opernad (>>)
+  - to append the output to a file, creating the file if it doesn't exist, or adding to it if it does
+    -  EX: strings filename >> output.txt
