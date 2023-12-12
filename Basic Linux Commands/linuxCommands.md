@@ -57,6 +57,19 @@
 - find
   - Helpful to find a specific file in the linux terminal
 
+- sudo
+  - Elevated privlages 
+    - Can elevate to root user using "sudo su"
+
+- chown
+  - Changing ownership of files/directories
+  - Can be used with sudo
+    - EX: 
+      - chown (username) (file)
+      - chown (username) -R (directory)
+        - -R means recursivly
+
+
 
 # Pipe Operand:
   - Transfer of standard output to some other destination
