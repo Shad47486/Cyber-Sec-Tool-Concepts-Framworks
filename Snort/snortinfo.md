@@ -75,6 +75,9 @@ snort -[command]
       - Snort will stop after reading the specified number of packets.
 
 ## Running Snort in IDS/IPS mode parameter/commands:
+  - IDS/IPS mode helps you manage the traffic according to user-defined rules.
+    - SNORT will create an "alert" file if the traffic flow triggers an alert.
+
 -c
     - Defining the configuration file.
 
@@ -92,11 +95,21 @@ snort -[command]
       - full: 
         - Full alert mode, providing all possible information about the alert. 
           - This one also is the default mode; once you use -A and don't specify any mode, snort uses this mode.
+            - No console output for this mode
+            -  contain all possible information on the action.
       - fast:
         - Fast mode shows the alert message, timestamp, source and destination IP, along with port numbers.
+          -  Contain summary information on the action like direction and alert header.
+          - No console output for this mode
       - console: 
         - Provides fast style alerts on the console screen.
+          - Basic header & rule info
+            - Less performance 
       - cmg: 
         - CMG style, basic header details with payload in hex and text format.
+          - Full packet details along with rule info
       - none: 
         - Disabling alerting.
+          - No console output for this mode
+            - No alert file 
+              - SNORT only generates log file.

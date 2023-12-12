@@ -69,7 +69,9 @@
       - chown (username) -R (directory)
         - -R means recursivly
 
+-ps
 
+-kill
 
 # Pipe Operand:
   - Transfer of standard output to some other destination
