@@ -113,3 +113,15 @@ snort -[command]
           - No console output for this mode
             - No alert file 
               - SNORT only generates log file.
+
+
+## Using with PCAP files & SNORT (parameter/commands):
+
+-r / --pcap-single=
+    - Read a single pcap
+
+--pcap-list=""
+    - Read pcaps provided in command (space separated).
+
+--pcap-show
+    - Show pcap name on console during processing.

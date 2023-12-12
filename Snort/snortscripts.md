@@ -67,4 +67,28 @@
     - Does provide alert info in the console: "console" and "cmg" modes
       - Can use 'console' parameter to help test user-created rules
 
-  - sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth1 -A console
+  - sudo snort -c (file/path) -q -Q --daq afpacket -i (2 interfaces) -A console
+    - EX: sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth1 -A console
+      - Dropping/blocking packetsd
+
+
+## Investigating single PCAP with parameter "-r"
+
+  - snort -r (.pcap file)
+    - Default reading options
+
+  - sudo snort -c (config file/path) -q -r (.pcapfile) -A console -n 10
+    - Investigate the pcap with the choosen configuration file
+
+## Investigating multiple PCAPs with parameter "--pcap-list"
+
+  - sudo snort -c (config file/path) -q --pcap-list=".pcap file names" -A console -n 10
+    - EX:
+      - sudo snort -c /etc/snort/snort.conf -q --pcap-list="icmp-test.pcap http2.pcap" -A console -n 10
+        - It is impossible to match the alerts with provided pcaps without snort's help
+
+## Investigating multiple PCAPs with parameter "--pcap-show"
+
+  - sudo snort -c (config file/path) -q --pcap-list=".pcap file names" -A console --pcap-show
+    - EX: 
+      - sudo snort -c /etc/snort/snort.conf -q --pcap-list="icmp-test.pcap http2.pcap" -A console --pcap-show
