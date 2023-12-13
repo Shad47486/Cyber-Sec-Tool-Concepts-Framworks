@@ -6,6 +6,9 @@
 - cd [path] 
   - Move back or foward within box
     - cd .. = moves back
+    - cd ~ = home dir
+      - Or cd 
+    - cd // = root dir
 
 - rm [file]= removes files/folders 
     - rm -r [folder]= recersively deletes items inside a folder 
