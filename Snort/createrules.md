@@ -107,7 +107,7 @@ General Rule, Payload Rule, Non-Payload Rule
           - No auto-backup feature of the rule history
 
 ## Payload rule option is used to help investigate the payload data, which is helpful to detect specific payload patterns (concepts):
-- Content
+- Content ( REALLY IMPORTANT TO FIND CONTENT SPECIFIC FOR UR NEEDS)
   - Make sure it mataches payload data by ASCII, HEX, or both.
     - Can use this multiple times in a single rule
       - More specific pattern match features the longer time to investigate a packet

@@ -20,7 +20,7 @@
     - sudo snort -X
       - Snort instance in full packet dump mode
 
-# LOGGING with Differenent Parameters/Commands:
+# LOGGING & READING LOGS with Differenent Parameters/Commands:
 
     - sudo snort -dev -l .
       - DONT FORGET THE DOT ITS NOT A MISTAKE
@@ -74,7 +74,7 @@
 
 ## Investigating single PCAP with parameter "-r"
 
-  - snort -r (.pcap file)
+  - sudo snort -r (.pcap file)
     - Default reading options
 
   - sudo snort -c (config file/path) -q -r (.pcapfile) -A console -n 10
@@ -92,3 +92,13 @@
   - sudo snort -c (config file/path) -q --pcap-list=".pcap file names" -A console --pcap-show
     - EX: 
       - sudo snort -c /etc/snort/snort.conf -q --pcap-list="icmp-test.pcap http2.pcap" -A console --pcap-show
+
+
+## running snort rule over pcap file: 
+snort -c local.rules -A full -l . -r .pcapfile
+  - the -l parameter logs it in the current directorys
+
+## Looking at log files to find contents inside:
+strings (log file name)
+  - Can use extender pipe to search:
+    - strings (logfile) | grep (what ur looking for)
