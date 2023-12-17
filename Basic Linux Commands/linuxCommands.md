@@ -76,6 +76,19 @@
 
 -kill
 
+-file [file]
+  - Gives minor information about file
+
+-strings [filename/path]
+  - Lists down the strings present in a file
+
+
+# File hash commands:
+- Allows you to decrypt files using native commands:
+  -md5sum [file]
+  -sha1sum [file]
+  -sha256sum [file]
+
 # Pipe Operand:
   - Transfer of standard output to some other destination
     * Form of redirection
