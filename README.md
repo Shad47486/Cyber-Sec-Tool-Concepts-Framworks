@@ -1,4 +1,4 @@
-## This is a repor that contains codes, scripts, Installion guides for different Security tools
+## This is a repo that contains codes, scripts, Installion guides for different Security tools
 
 Contains: 
 Enum4linux,
