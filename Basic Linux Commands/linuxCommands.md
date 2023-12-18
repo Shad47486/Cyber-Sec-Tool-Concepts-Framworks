@@ -30,19 +30,30 @@
   - Open doc
 
 - cat [file]
-  - Reading files
+  - Concatenate
+    - Displays the contents of one or more files without having to open the file for editing.
+      - Allows you to edit muiltple files without going into them, display contents of single or multiple files, redirect contents of multiple files, append contents to another file.
+
+- pwd
+  - print working directory
 
 - grep 
-  -  
+  - Allows us to search the contents of files for specific values that we are looking for.
     - Used with the pipe operand
 
 - egrep
-  - searchs a given data set of data and print every line which contains a given pattern. Like "find word" in browser Example: egrep 'word' path
-    - Used with the pipe operand
+  - searchs a given data set of data and print every line which contains a given pattern. 
+    - Like "find word" in browser Example: egrep 'word' path
+      - Used with the pipe operand
 
 - awk 
 
 - echo [file]
+  - output any text that we provide
+  
+- whoami
+  - Find out what user we're currently logged in as
+    - Root, admin, guest, etc.
 
 - checksec
   - tells you security information about a file.
