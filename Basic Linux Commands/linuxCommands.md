@@ -1,7 +1,5 @@
 # List of useful commands to use for linux to mannuver thru linux CMDS
-
 - ls 
-
 
 - cd [path] 
   - Move back or foward within box
@@ -99,6 +97,18 @@
 - ssh user@ip 
   - Allows us to remotely execute commands on another device remotely.
     - Any data sent between the devices is encyrpoted when it is sent over a network such as the internet
+
+- histroy
+  - Provides history of commands ran
+
+- !x or !! 
+  - x represents the number of command excuted within session
+  - ! represents the excution of command 
+    - EX: !10 means run the 10th command from my histroy
+      - Can use history to see what command is the 10th command written
+  - !! means to exucte previous command
+
+
 
 # parameters to add on besides pipes
 - a 

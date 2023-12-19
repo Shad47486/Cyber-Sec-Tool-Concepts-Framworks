@@ -15,12 +15,10 @@
 -v 
 - Version info
 
+-s
+- Use signature file
+
 # Can use the "ZeekControl" mode with the following commands as well;
 - zeekctl status 
 - zeekctl start 
 - zeekctl stop
-
-# To use Zeek with pcap files:
-zeek -C -r sample.pcap 
-    - to view: ls -l
-

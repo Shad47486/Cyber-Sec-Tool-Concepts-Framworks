@@ -10,6 +10,7 @@
 - Ability to detect complex threats.
 - It has a scripting language and supports event correlation. 
 - Easy to read logs.
+  - Well structured and tab-seperated ASCII files (requires some effort to read)
 
 # Common Use Cases: 
 - Network monitoring.
@@ -101,8 +102,42 @@ What is the default log location for stored logs in ZEEK?
 
 
 
+# How Zeek Signatures are broken up: 
+- Signatures ID:
+  - Consists of Unique Signature Name
 
+- Conditions:
+  - Header: filtering the packet headers for specific source & destination addresses, protocol, & port #'s.
+  - Content: Filtering the packet payload for specific value/pattern.
+  - # Whats are Conditions & filters that can be used in the Condtion field:
+    - Header: 
+      - src-ip: Source IP.
+      - dst-ip: Destination IP.
+      - src-port: Source port.
+      - dst-port: Destination port.
+      - ip-proto: Target protocol. Supported protocols; TCP, UDP, ICMP, ICMP6, IP, IP6
+    - Content: 
+        - payload: Packet payload.
+        - http-request: Decoded HTTP requests.
+        - http-request-header: Client-side HTTP headers.
+        - http-request-body: Client-side HTTP request bodys.
+        - http-reply-header: Server-side HTTP headers.
+        - http-reply-body: Server-side HTTP request bodys.
+        - ftp: Command line input of FTP session
+    - Context:
+      - same-ip = Filtering the source & destination addresses for duplication.
 
+    - Action:
+      - Event = Signature match msg
+    - Comparison Operators:
+      - ==, !=, <, <=, >, >=
+    - FILTERS accept string, numeric and regex values.
 
+- Actions: 
+  - Default Action: Create the "signatures.log" fgile in case of a signature match
+  - Additional Action: Trigger a Zeek Script.
 
+# Signature files can consist of multiple signatures 
+- Therefore we can have one file for each protocol/situation/threat type
 
+# Zeek Supports Snort rules aswell using a script called snort2bro, which converts snort rules to Zeek (also know as bro) signatures.
