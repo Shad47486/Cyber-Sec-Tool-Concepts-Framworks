@@ -1,7 +1,7 @@
 # List of useful commands to use for linux to mannuver thru linux CMDS
 
 - ls 
-  - Look inside a directory to see what files/folders there are
+
 
 - cd [path] 
   - Move back or foward within box
@@ -23,6 +23,9 @@
 - mkdir [folder]= 
   - Creates a direcotry/folder
 
+- cp [file] [file2]
+  - Copies a folder/file
+
 - ping [ip/DNS]
   - Pings a ip address/cidr to see if communication to the internet is there
 
@@ -39,12 +42,12 @@
 
 - grep 
   - Allows us to search the contents of files for specific values that we are looking for.
-    - Used with the pipe operand
+    - Used with the pipe operand (|)
 
 - egrep
   - searchs a given data set of data and print every line which contains a given pattern. 
     - Like "find word" in browser Example: egrep 'word' path
-      - Used with the pipe operand
+      - Used with the pipe operand (|)
 
 - awk 
 
@@ -83,16 +86,24 @@
       - chown (username) -R (directory)
         - -R means recursivly
 
--ps
+- ps
 
--kill
+- kill
 
--file [file]
+- file [file]
   - Gives minor information about file
 
--strings [filename/path]
+- strings [filename/path]
   - Lists down the strings present in a file
 
+- ssh user@ip 
+  - Allows us to remotely execute commands on another device remotely.
+    - Any data sent between the devices is encyrpoted when it is sent over a network such as the internet
+
+# parameters to add on besides pipes
+- a 
+  - Short for all
+    - ls -a
 
 # File hash commands:
 - Allows you to decrypt files using native commands:
