@@ -1,9 +1,9 @@
-Starting command: 
+# Can start zeek with: 
 - zeekctl 
-  - FOR CLI CONTROL interface
-
-- zeek 
-  - FOR CLI general commands
+  - This is the ZeekContorl Module 
+    - This module requires sudo perms 
+- zeek
+  - This is the normal zeek CLI commands
 
 # Parameters
 -r 
