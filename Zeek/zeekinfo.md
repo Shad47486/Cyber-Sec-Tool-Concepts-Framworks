@@ -117,13 +117,13 @@ What is the default log location for stored logs in ZEEK?
       - dst-port: Destination port.
       - ip-proto: Target protocol. Supported protocols; TCP, UDP, ICMP, ICMP6, IP, IP6
     - Content: 
-        - payload: Packet payload.
-        - http-request: Decoded HTTP requests.
-        - http-request-header: Client-side HTTP headers.
-        - http-request-body: Client-side HTTP request bodys.
-        - http-reply-header: Server-side HTTP headers.
-        - http-reply-body: Server-side HTTP request bodys.
-        - ftp: Command line input of FTP session
+      - payload: Packet payload.
+      - http-request: Decoded HTTP requests.
+      - http-request-header: Client-side HTTP headers.
+      - http-request-body: Client-side HTTP request bodys.
+      - http-reply-header: Server-side HTTP headers.
+      - http-reply-body: Server-side HTTP request bodys.
+      - ftp: Command line input of FTP session
     - Context:
       - same-ip = Filtering the source & destination addresses for duplication.
 
@@ -137,7 +137,49 @@ What is the default log location for stored logs in ZEEK?
   - Default Action: Create the "signatures.log" fgile in case of a signature match
   - Additional Action: Trigger a Zeek Script.
 
-# Signature files can consist of multiple signatures 
+# Signature files can consist of multiple signatures: 
 - Therefore we can have one file for each protocol/situation/threat type
 
 # Zeek Supports Snort rules aswell using a script called snort2bro, which converts snort rules to Zeek (also know as bro) signatures.
+
+# Zeek has its own event-driven scripting language:
+- Locations of scripts:
+  - Already installed Zeek Scripts are found: 
+    -  "/opt/zeek/share/zeek/base"
+       -  DO NOT MODIFY
+  - User-Generated or modified Scripts 
+    - "/opt/zeek/share/zeek/site"
+  - Policy Scripts 
+    - "/opt/zeek/share/zeek/policy"
+  - To automatically load/use script in sniffing mode (must identify the script in the zeek config files)
+    - "/opt/zeek/share/zeek/site/local.zeek"
+      - Or can be used for a single run, just like signatures.
+    - You can call scripts in live monitoring mode by loading them with the command load @/script/path or load @script-name in local.zeek file. 
+- Zeek extension = .zeek
+
+
+# Zeeks different Frameworks:
+- You can easily see the usage of framworks in scripts by the script calling a specific framework
+  - Typically seen as: load @ $PATH/base/frameworks/framework-nam
+- Hashes Framework:
+  - Prebuilt function of the file framework and have MD5, SHA1 and SHA256 hashes of the detected files.
+    - Source Location: /opt/zeek/share/zeek/policy/frameworks/files/hash-all-files.zeek 
+           -  Syntax: 
+              - zeek -C -r case1.pcap /opt/zeek/share/zeek/policy/frameworks/files/hash-all-files.zeek
+              OR if already in dir: 
+              -  zeek -C -r case1.pcap hash-demo.zeek
+
+- Extract Files Framework:
+  - File framework can extract the files transferred.
+    - Source Location: /opt/zeek/share/zeek/policy/frameworks/files/extract-all-files.zeek
+      - Will automatically create a folder/directory called "extract_files" 
+        - Use "file" command to determine the file type of extracted files
+          - EX within extract_files folder/dir:
+            -  file *| nl
+
+- Intelligence Framework: 
+  - Can work with data feeds to process & correlate events and identify anomalies
+    - Requires a feed to match and create alerts from the network traffic
+      - Source Location: /opt/zeek/intel/zeek_intel.txt
+
+
