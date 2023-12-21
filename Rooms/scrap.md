@@ -1,1 +1,1 @@
-#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	fuid	file_mime_type	file_desc	proto	note	msg	sub	src	dst	p	n	peer_desc
+<!DOCTYPE html\n  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"\n  "DTD/xhtml1-strict.dtd">
