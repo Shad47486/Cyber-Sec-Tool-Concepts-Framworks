@@ -1,0 +1,1 @@
+# This folder relates to the different ports and how they can be connected from & exploited if left open to the internet

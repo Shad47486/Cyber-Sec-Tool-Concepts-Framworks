@@ -48,7 +48,7 @@
 - Packet Analysis
 - TLS Decryption
 
-What is the default log location for stored logs in ZEEK?
+## What is the default log location for stored logs in ZEEK?
 /opt/zeek/logs/
 
 ## Different Zeek Log Files:

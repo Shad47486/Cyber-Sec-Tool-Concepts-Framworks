@@ -1,77 +1,77 @@
-# This is a repo that contains codes, scripts, Installion guides for different Security tools
+# This is a repo that contains codes, scripts, installion guides for different sec tools learned from TRYHACKME
 
-## Basic Linux Commands: 
+## Basic Linux Commands:
 
-- [Info on linux Commands](.//)
+- [Info on linux Commands](.//Basic_Linux_Commands/linuxsys.md)
 
 # Brim:
 
-- [Info on Wazuh](.//)
+- [Info on Brim](.//Brim/briminfo.md)
 
 
 ## Enum4linux:
 
-- [Info on Wazuh](.//)
+- [Info on Enum4linux](.//Enum4linux/E4linfo.md)
 
 ## Gobuster:
 
-- [Info on Wazuh](.//)
+- [Info on Gobuster](.//Gobuster/busterinfo.md)
 
 ## Hashcat:
 
-- [Info on Wazuh](.//)
+- [Info on Hashcat](.//Hashcat/hcinfo.md)
 
 ## Hydra:
 
-- [Info on Wazuh](.//)
+- [Info on Hydra](.//)
 
 ## Impacket:
 
-- [Info on Wazuh](.//)
+- [Info on Impacket](.//)
 
 ## Kerbrute:
 
-- [Info on Wazuh](.//)
+- [Info on Kerbrute](.//Kerbrute/kerbruteinfo.md)
 
 ## Metasploit:
 
-- [Info on Wazuh](.//)
+- [Info on Metasploit](.//Metasploit/metainfo.md)
 
 ## Mimikatz:
 
-- [Info on Wazuh](.//)
+- [Info on Mimikatz](.//Mimikatz/miminfo.md)
 
 ## Nmap:
 
-- [Info on Wazuh](.//)
+- [Info on WazuNmaph](.//Nmap/nmapinfo.md)
 
 ## Protocol:
 
-- [Info on Wazuh](.//)
+- [Info on Protocol](.//Protocols/Ports.md)
 
 ## Rubeues:
 
-- [Info on Wazuh](.//)
+- [Info on Rubeues](.//Rubeues/rebinfo.md)
 
 ## Snort:
 
-- [Info on Wazuh](.//)
+- [Info on Snort](.//Snort/snortinfo.md)
 
 ## Sysmon:
 
-- [Info on Wazuh](.//)
+- [Info on Sysmon](.//Sysmon/Sysmoninfo.md)
 
-## volatility:
+## Volatility:
 
-- [Info on Wazuh](.//)
+- [Info on Volatility](.//Volatility/volinfo.md)
 
 ## Wazuh:
 
-- [Info on Wazuh](.//)
+- [Info on Wazuh](.//Wazuh/wazuhinfo.md)
 
 ## Zeek:
 
-- [Info on Zeek](.//)
+- [Info on Zeek](.//Zeek/zeekinfo.md)
 
 ## ZimmermanTools:
 
