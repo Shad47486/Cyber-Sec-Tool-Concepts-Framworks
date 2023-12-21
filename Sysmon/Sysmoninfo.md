@@ -1,6 +1,7 @@
-## To Start Sysmom (Start Powershell/CMD as admin)
-## Run command to accept the end-user license agreement, & Pick a config file to use that u specify: 
-- Sysmon.exe -accepteula -i ..\Configuration\"Filename"
+# To Start Sysmom (Start Powershell/CMD as admin):
+
+- Run command to accept the end-user license agreement, & Pick a config file to use that u specify:
+  - Sysmon.exe -accepteula -i ..\Configuration\"Filename"
 
 
 ## Best Practices Uses Sysmon

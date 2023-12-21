@@ -1,10 +1,9 @@
-# Nmap 
-- open-source network scanning tool employed for network discovery and security auditing
+# Syntax:
 
-## Syntax:
 - nmap [Command] [IP address/range/etc]
 
 ## Parameters/Arguments:
+
 -sV: Parameter used to determine the version of the service running on port
 
 -sC: Parameter scan with default NSE scripts. 

@@ -1,52 +1,57 @@
-# What is Zeek? 
+# What is Zeek?
+
     -  Open-source & commercial passive Network Monitoring tool (traffic analysis framework)
        -  NSM and IDS framework. 
        -  It is heavily focused on network analysis. 
        -  The detection mechanism is focused on events.
 
-# Pros: 
+## Pros:
+
 - It provides in-depth traffic visibility.
 - Useful for threat hunting.
 - Ability to detect complex threats.
-- It has a scripting language and supports event correlation. 
+- It has a scripting language and supports event correlation.
 - Easy to read logs.
   - Well structured and tab-seperated ASCII files (requires some effort to read)
 
-# Common Use Cases: 
+## Common Use Cases:
+
 - Network monitoring.
 - In-depth traffic investigation.
-- Intrusion detecting in chained events. 
+- Intrusion detecting in chained events.
 
-# Consists of 2 layers: 
+## Consists of 2 layers:
+
 - Event Engine layer:
-  - Where the packets are processed 
+  - Where the packets are processed
     - Called the event core and is responsible for describing the event without focusing on event details
       - It is where the packages are divided into parts such as source and destination addresses, protocol identification, session analysis and file extraction.
--  Policy Script Interpreter layer: 
-   -  Where the semantic analysis is conducted. 
-      -  It is responsible for describing the event correlations by using Zeek scripts.
+- Policy Script Interpreter layer:
+  - Where the semantic analysis is conducted.
+    - It is responsible for describing the event correlations by using Zeek scripts.
 
-# What are the different framworks that Zeek uses?
+## What are the different framworks that Zeek uses?
+
 - Logging
-- Notice 
+- Notice
 - Input
-- Configuration 
+- Configuration
 - Intelligence
 - Cluster
 - Broker Communication
 - Supervisor
-- GeoLocation 
+- GeoLocation
 - File analysis
-- Signature 
-- Summary 
-- NetControl 
+- Signature
+- Summary
+- NetControl
 - Packet Analysis
 - TLS Decryption
 
 What is the default log location for stored logs in ZEEK?
 /opt/zeek/logs/
 
-# Different Zeek Log Files:
+## Different Zeek Log Files:
 
 - Network Protocol Logs (Files):
   - conn.log, dce_rpc.log, dhcp.log, dnp3.log, dns.log, ftp.log, http.log, irc.log, kerberos.log, modbus.log, modbus_register_change.log, mysql.log, ntlm.log, ntp.log, radius.log, rdp.log, rfb.log, sip.log, smb_cmd.log, smb_files.log, smb_mapping.log, smtp.log, snmp.log, socks.log, ssh.log, ssl.log, syslog.log, tunnel.log.
@@ -70,13 +75,13 @@ What is the default log location for stored logs in ZEEK?
   - broker.log, capture_loss.log, cluster.log, config.log, loaded_scripts.log, packet_filter.log, print.log, prof.log, reporter.log, stats.log, stderr.log, stdout.log.
 
 
-# Most Commonly used log and how frequent they are updated:
+## Most Commonly used log and how frequent they are updated:
 
 - known_hosts.log
   - List of hosts that completed TCP handshakes
     - Updated Daily
 
-- known_services.log 
+- known_services.log
   - List of servicces used by host
     - Updated Daily
 
@@ -84,39 +89,38 @@ What is the default log location for stored logs in ZEEK?
   - List of SSL certifcates
     - Updated Daily
 
-- software.log 
+- software.log
   - List of software used on the network
     - Updated Daily
 
-- notice.log 
+- notice.log
   - Anomalies detected by Zeek
-    - Updated PER SESSION 
+    - Updated PER SESSION
 
 - intel.log
   - Traffic contains malicious patterns/indicators
-    - Updated PER SESSION 
+    - Updated PER SESSION
 
 - signatures.log
   - List of triggered signatures
-    - Updated PER SESSION 
+    - Updated PER SESSION
 
+## How Zeek Signatures are broken up:
 
-
-# How Zeek Signatures are broken up: 
 - Signatures ID:
   - Consists of Unique Signature Name
 
 - Conditions:
   - Header: filtering the packet headers for specific source & destination addresses, protocol, & port #'s.
   - Content: Filtering the packet payload for specific value/pattern.
-  - # Whats are Conditions & filters that can be used in the Condtion field:
-    - Header: 
+  - Whats are Conditions & filters that can be used in the Condtion field?
+    - Header:
       - src-ip: Source IP.
       - dst-ip: Destination IP.
       - src-port: Source port.
       - dst-port: Destination port.
       - ip-proto: Target protocol. Supported protocols; TCP, UDP, ICMP, ICMP6, IP, IP6
-    - Content: 
+    - Content:
       - payload: Packet payload.
       - http-request: Decoded HTTP requests.
       - http-request-header: Client-side HTTP headers.
@@ -137,49 +141,49 @@ What is the default log location for stored logs in ZEEK?
   - Default Action: Create the "signatures.log" fgile in case of a signature match
   - Additional Action: Trigger a Zeek Script.
 
-# Signature files can consist of multiple signatures: 
+## Signature files can consist of multiple signatures:
+
 - Therefore we can have one file for each protocol/situation/threat type
 
-# Zeek Supports Snort rules aswell using a script called snort2bro, which converts snort rules to Zeek (also know as bro) signatures.
+### Zeek Supports Snort rules aswell using a script called snort2bro, which converts snort rules to Zeek (also know as bro) signatures.
 
-# Zeek has its own event-driven scripting language:
+## Zeek has its own event-driven scripting language:
+
 - Locations of scripts:
-  - Already installed Zeek Scripts are found: 
-    -  "/opt/zeek/share/zeek/base"
-       -  DO NOT MODIFY
-  - User-Generated or modified Scripts 
+  - Already installed Zeek Scripts are found:
+    - "/opt/zeek/share/zeek/base"
+      - DO NOT MODIFY
+  - User-Generated or modified Scripts
     - "/opt/zeek/share/zeek/site"
-  - Policy Scripts 
+  - Policy Scripts
     - "/opt/zeek/share/zeek/policy"
   - To automatically load/use script in sniffing mode (must identify the script in the zeek config files)
     - "/opt/zeek/share/zeek/site/local.zeek"
       - Or can be used for a single run, just like signatures.
-    - You can call scripts in live monitoring mode by loading them with the command load @/script/path or load @script-name in local.zeek file. 
+    - You can call scripts in live monitoring mode by loading them with the command load @/script/path or load @script-name in local.zeek file.
 - Zeek extension = .zeek
 
+## Zeeks different Frameworks:
 
-# Zeeks different Frameworks:
 - You can easily see the usage of framworks in scripts by the script calling a specific framework
   - Typically seen as: load @ $PATH/base/frameworks/framework-nam
 - Hashes Framework:
   - Prebuilt function of the file framework and have MD5, SHA1 and SHA256 hashes of the detected files.
-    - Source Location: /opt/zeek/share/zeek/policy/frameworks/files/hash-all-files.zeek 
-           -  Syntax: 
+    - Source Location: /opt/zeek/share/zeek/policy/frameworks/files/hash-all-files.zeek
+           -  Syntax:
               - zeek -C -r case1.pcap /opt/zeek/share/zeek/policy/frameworks/files/hash-all-files.zeek
-              OR if already in dir: 
+              OR if already in dir:
               -  zeek -C -r case1.pcap hash-demo.zeek
 
 - Extract Files Framework:
   - File framework can extract the files transferred.
     - Source Location: /opt/zeek/share/zeek/policy/frameworks/files/extract-all-files.zeek
-      - Will automatically create a folder/directory called "extract_files" 
+      - Will automatically create a folder/directory called "extract_files"
         - Use "file" command to determine the file type of extracted files
           - EX within extract_files folder/dir:
-            -  file *| nl
+            - file *| nl
 
-- Intelligence Framework: 
+- Intelligence Framework:
   - Can work with data feeds to process & correlate events and identify anomalies
     - Requires a feed to match and create alerts from the network traffic
       - Source Location: /opt/zeek/intel/zeek_intel.txt
-
-

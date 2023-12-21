@@ -1,4 +1,4 @@
-Commands/scrripts:
+# Commands/scripts:
 
 To get into CLI: 
 "msfconsole"

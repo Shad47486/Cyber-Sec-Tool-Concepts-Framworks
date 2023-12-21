@@ -10,9 +10,9 @@
 
 ## Features/Good to Knows:
 
-- [How to setup agents in windows OS](.//Wazuh/agentsyswin.md)
-- [How to Setup agents in Linux OS](.//Wazuh/agentlinux.md)
-    - []
+- [How to setup agents in windows OS](./agentsyswin.md)
+- [How to Setup agents in Linux OS](./agentlinux.md)
+  - [How to setup auditing in Linux OS](./auditinglinux.md)
 
 ## File locations: 
 
