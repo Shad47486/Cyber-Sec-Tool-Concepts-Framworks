@@ -40,20 +40,19 @@
           - Edit --> Preferences --> Name Resolution --> MaxMind database directories
             - Supports MaxMind DB
 
-
-## IPv4 & IPv6
+### IPv4 & IPv6
 
 - Statistics (menu tab) --> IPv4 Statistics
   - Analysts can identify and list all events linked to specific IP versions in a single window and use it for the event of interest. 
 
-## DNS
+### DNS
 
 - Statistics (menu tab) --> DNS
   - Breaks down all DNS packets from the capture file 
     - Helps analysts view the findings in a tree view based on packet counters & %'s of the DNS protocol
     - Analysts can view the DNS service's overall usage, including rcode, opcode, class, query type, service and query stats and use it for the event of interest
 
-## HTTP
+### HTTP
 
 - Statistics (menu tab) --> HTTP 
   - Breaks down all HTTP packets from the capture file 

@@ -69,3 +69,31 @@
 
 - Display Filters:
   - Used for viewing the packets valid for the used filter.
+
+# Simple Navigation/Features:
+
+- Going to a specific packet:
+  - ctrl+g or in go tab
+    - Navigates between packets up and down
+      - Also provides in-frame packet tracking and finds the next packet in the particular part of the conversation.
+
+- Finding a sepcific packet by context within packet: 
+  - ctrl+f or in edit tab
+
+- Marking a packet:
+  - ctrl+m or in edit tab or right clicking the specific packet
+    - Good to mark if you find a sus packet that wireshark may not have picked up on
+      - Changes packet color to black
+
+- Packet Comments:
+  - In edit tab or ctrl+alt+c
+    - Helps for long investigations
+
+- Export Packets:
+  - In file tab
+    - Helps analyst share only SUS packages & not giving redundant info about the processes being taken.
+
+- Export Objects (Files):
+  - In file tab
+    - Important an analyst discover shared files & saves them for further investigation
+      - Works for Protocols steams: DICOM, HTTP, IMF, SMB, TFTP
