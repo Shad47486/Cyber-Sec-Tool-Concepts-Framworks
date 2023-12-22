@@ -121,18 +121,22 @@
   -sha1sum [file]
   -sha256sum [file]
 
-# Pipe Operand:
-  - Transfer of standard output to some other destination
-    * Form of redirection
+# Pipe Operand (|):
 
-Operand (|)
-  - To pass the output of the strings command to another command for further processing.
-    - EX: strings filename | grep 'search_term'
+- Transfer of standard output to some other destination
+  - Form of redirection
 
-Redriect Operand (>)
+- Operator (&)
+  - Allows you to run commands in the background of ur terminal
+
+- Operator (&&)
+  - Allows you to combine multiple commands together in one line of your terminal.
+
+- Redriect Operand (>)
   - To store the output in a file, overwriting the file if it already exists
     - EX: strings filename > output.txt or path to file
 
-Redriect Operand (>>)
+- Redriect Operand (>>)
   - To append the output to a file, creating the file if it doesn't exist, or adding to it if it does
-    -  EX: strings filename >> output.txt
+    - EX: strings filename >> output.txt
+    - Comapred to > operator it does the same function but appends the output rather than replacing it (meaning nothing is overwritten)

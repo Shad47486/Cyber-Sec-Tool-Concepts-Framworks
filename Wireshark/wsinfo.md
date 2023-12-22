@@ -10,6 +10,8 @@
 
 - Displayed everything in packet portion size 
 
+- Based on the 5 layer OSI model.
+
 ## When loading a .pcap file in wireshark, what are the 3 panes that are shown? What do they do?
 
 - Packet List Pane (Center of the screen where all packes can be seen):
