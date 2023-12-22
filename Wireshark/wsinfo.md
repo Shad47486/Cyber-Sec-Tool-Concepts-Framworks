@@ -30,7 +30,7 @@
 - Temp rules that are only available during a program session
 - Perm rules that are saved under the preference file (profile) & available For the next progrma session
 
-## Color Meanings
+## Packet Color Meanings
 
 - Blue
   - Information on usual workflow
@@ -50,6 +50,17 @@
 
 - Black 
   - Marked packets from the user
+
+## Packet Filter Toolbar (search bar in the middle)
+
+- Where you can create & apply ur display ffilters
+  - Packet filters are defined in lowercase
+  - Packet Filters have autocomplete feature to break down protocol details, & each detail is represented by a "dot"
+  - Packet filters have 3 color representation
+    - Green = valid filter
+    - Red = Invalid Filter
+    - Yellow = Warning Filter
+      - Yello means it works but it is unreliable, & it is suggested to change it with a valid filter.
 
 ## 2 Types of Filtering
   
