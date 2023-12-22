@@ -1,4 +1,4 @@
-# What is WireShark?
+# What is WireShark? (Also contains tip/tricks)
 
 - One of the most potent traffic analyser tools available in the wild.
 - Serves multipe purpose such as:
@@ -8,9 +8,16 @@
 
 - You can merge .pcap files & view file details from packets
 
-- Displayed everything in packet portion size 
+- Displayed everything in packet portion size
 
 - Based on the 5 layer OSI model.
+
+- You can save previsouly used filters in bookmarks
+
+- You can create profiles for different investigation needs!
+  - Edit --> Configuration Profiles
+    OR
+  - lower right bottom of the status bar --> Profile
 
 ## When loading a .pcap file in wireshark, what are the 3 panes that are shown? What do they do?
 
@@ -45,10 +52,10 @@
     - Severity = Warn
 
 - Red
-  - Problems like malformed packets 
-    - Severity = Error 
+  - Problems like malformed packets
+    - Severity = Error
 
-- Black 
+- Black
   - Marked packets from the user
 
 ## Packet Filter Toolbar (search bar in the middle)
@@ -70,14 +77,14 @@
 - Display Filters:
   - Used for viewing the packets valid for the used filter.
 
-# Simple Navigation/Features:
+## Simple Navigation/Features
 
 - Going to a specific packet:
   - ctrl+g or in go tab
     - Navigates between packets up and down
       - Also provides in-frame packet tracking and finds the next packet in the particular part of the conversation.
 
-- Finding a sepcific packet by context within packet: 
+- Finding a sepcific packet by context within packet:
   - ctrl+f or in edit tab
 
 - Marking a packet:
@@ -97,3 +104,4 @@
   - In file tab
     - Important an analyst discover shared files & saves them for further investigation
       - Works for Protocols steams: DICOM, HTTP, IMF, SMB, TFTP
+

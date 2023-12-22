@@ -1,4 +1,4 @@
-## Filtering (Menu on the top & Right-Click Menu)
+# Filtering (Menu on the top & Right-Click Menu)
 
 - Apply As Filter (Menu Tab/Right-Click Menu):
   - Enter in ur query
@@ -6,13 +6,13 @@
   - Apply filter after query.
 
 - Prepare as Filter (Menu Tab/Right-Click Menu):
-  - Does not apply filter but adds a required query to the pane & WAITS for the execution command (enter) 
-    - Or another chosen filtering option by using the "and/or" from the right click menu
+  - Does not apply filter but adds a required query to the pane & WAITS for the execution command (enter)
+    - Or another chosen filtering option by using the "&/or" from the right click menu
 
 - Conversation Filter (Menu Tab/Right-Click Menu):
-  - Suppose you want to investigate a specific packet number and all linked packets by focusing on IP addresses and port numbers
+  - Suppose you want to investigate a specific packet number & all linked packets by focusing on IP addresses & port numbers
   - Helps view ONLY the related packet & hide the rest of the packets easily
-    - For EX: Suppose you want to investigate a specific packet number and all linked packets by focusing on IP addresses and port numbers
+    - For EX: Suppose you want to investigate a specific packet number & all linked packets by focusing on IP addresses & port numbers
 
 - Colourise Conversation (Menu Tab/Right-Click Menu):
   - To reset go back to view, colurise conversation, then reset colourisation.
@@ -66,7 +66,7 @@
     - ge (>=)
       - Greater than or equal to
         - EX: ip.ttl >= 0xFA
-    - le (<=>)
+    - le (<=)
       - Less than or equal to
         - EX: ip.ttl <= 0xA
 
@@ -82,12 +82,13 @@
       - Logical NOT
         - EX: !(ip.src == 10.10.10.222)
 
+
 ## Capture Filtering (Protocol Filtering) (Commands/Operators used in display filter search bar)
 
 - IP Filters (Used with Display Filter Search Bar):
   - Help analyst Filter the traffic according to IP lvl info from the packets (NETWORK LAYER or layer 3 of OSI)
     - Gives info such as IP addresses, version, TTL (time to live), type of service, flags, & checksum values.
-  - Common Filters include: 
+  - Common Filters include:
     - ip
       - Shows all ip packets
     - ip.addr == 10.10.10.111
@@ -99,7 +100,7 @@
     - ip.dst == 10.10.10.111
       - Show all packets sent to 10.10.10.111
     - ip.addr vs ip.src/ip.dst
-      - ip.addr filters the traffic w/o considering the packet direction. 
+      - ip.addr filters the traffic w/o considering the packet direction.
       - The ip.src/ip.dst filters the packet depending on the packet direction.
 
 - TCP & UDP Filters (Used with Display Filter Search Bar):
@@ -108,7 +109,7 @@
       - Source & destination ports, sequence number, acknowledgement number, windows size, timestamps, flags, length & protocol errors.
   - Common Filters Include:
     - tcp.port == 80
-      - Show all TCP packets with port 80 
+      - Show all TCP packets with port 80
     - tcp.srcport == 1234
       - Show all TCP packets originating from port 1234
     - tcp.dstport == 80
@@ -145,21 +146,45 @@
 - Display Filter Expressions (Used with Display Filter Search Bar):
   - Stores all supported protocol structures to help analysts create display filters
     - Helpful when an analyst cant recall the required filter for a specific protocol or is unsure about the assignable values for a filter
-    - Shows info such as: 
+    - Shows info such as:
       - Shows all protocol fields, accepted value types (integer or string) & predefined values (if any)
 
-
-## Advanced Filtering (Commands/Operators used in display filter search bar)
+### Advanced Filtering (Commands/Operators used in display filter search bar)
 
 - Filter: "contains"
-  - A comparison operator that searches a value inside packets.
+  - Comparison operator that searches a value inside packets.
     - Case-Senstive & provides similar functionality to the "Find" option by focusing on a specific field
-      - EX: Finding all Apache Servers
-        - http.server contains "Apache"
+      - EX: Finding all Apache Servers\
+        - Meaning you have to list all HTTP packets where packets "server" field contains "Apache":
           - http.server contains "Apache"
 
 - Filter: "matches"
+  - Comparison operator that search a pattern of regular expressions
+  - CASE INSENSTIVE & complex queries have a margin of error
+    - EX: Finding all .php & .html
+      - Meaning you have to first list all HTTP packets where 'host' fields match keywords ".php" or ".html"
+        - http.host matches "\.(php|html)"
+
 - Filter: "in"
+  - Set membership that searches a value or field inside of a specific scope/range.
+    - EX: find all packets that use ports 80, 443, 8080
+      - Meaning you have to list all TCP packets where "port" fields have values 80,443,8080
+        - tcp.port in {80 443 8080}
+
 - Filter: "upper"
+  - Function that converts a string to uppercase
+    - EX: Find all "APACHE" servers.
+      - Meaning you have to convert all HTTP packets' "server" fields to uppercase & list packets with the "APACHE" keyword.
+        - upper(http.server) contains "APACHE"
+
 - Filter: "lower"
+  - Function that converts a string value to lowercase
+    - EX: Find all "apache" servers.
+      - Meaning you have to Convert all HTTP packets' "server" fields info to lowercase & list packets with the "apache" keyword.
+        - lower(http.server) contains "apache"
+
 - Filter: "string"
+  - Function that converts a non-string value to a stirng
+    - EX: Find all frames with odd numbers.
+      - Meaning you have to convert all "frame number" fields to string values, & list frames end with odd values.
+        - string(frame.number) matches "[13579]$"
