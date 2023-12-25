@@ -35,9 +35,27 @@
     - Deface of a website?
       - What ended up on the website?
 
-- Command and Control Phase
+- Command and Control Phase:
   - How are they communicating with our servers?
 
-- Weaponization Phase
+- Weaponization Phase:
+  - This is where Adversaries would:
+    - Create Malware / Malicious document to gain initial access / evade detection etc.
+    - Establish domains similar to the target domain to trick users.
+    - Create a Command and Control Server (C2) for the post-exploitation communication/activity etc.
+      - Mainly uses OSINT tools such as:
+        - [Robtex](<https://www.robtex.com/>):
+          - Threat Intel site that provides information about IP addresses, domain names, etc.
+        - [Virustotal](<https://www.virustotal.com/gui/home/upload>)
+          - OSINT site used to analyze suspicious files, domains, IP, etc.
 
-- Delivery Phase
+- Delivery Phase:
+  - Attackers create malware and infect devices to gain initial access or evade defenses and find ways to deliver it through different means.
+  - Helps to understand more about the attacker and their methodology!
+    - How has the info we have obtained up until this point to use OSINT tools to find any malware linked with the advesary:
+      - [ThreatMiner](<https://www.threatminer.org/host.php?q=23.22.63.114#gsc.tab=0&gsc.q=23.22.63.114&gsc.page=1>)
+        - Threat intelligence portal that provides information on indicators of compromise (IOC) such as domains, IP address, malware samples (MD5, SHA1 and SHA256), SSL certificates, WHOIS information and malicious URLs such as phishing and malware links
+      - [Hybrid-Analysis](<https://www.hybrid-analysis.com/>)
+        - Free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology.
+      - [Virustotal](<https://www.virustotal.com/gui/home/upload>)
+        - OSINT site used to analyze suspicious files, domains, IP, etc.
