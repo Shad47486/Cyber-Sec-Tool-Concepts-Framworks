@@ -8,6 +8,7 @@
         - Uses Targets & Modules to do this (2):
           - Targets to define the forensic artifact that needs to be extracted.
           - Modules are programs that process the collected artifacts and even extracts info from them.
+    - Extraction works on like systems, mounted images, or the f-response utility
 - kape.exe will startup the CLI version
 - gkape.exe will startup the GUI version
 
@@ -26,6 +27,13 @@
 ### Target Options
 
 - Targets are the artifacts that need to be collected from a system or image and copied to our provided destination.
-  - EX: windows prefetch can be used as a target.
+  - EX: Windows prefetch folder can be used as a target.
+    - Esentially targets copy files from one place to another.
+
+- Last 4 files at the bottom are guides & templates to create targets & Compount Targets of our own
+
+- Targets use the .tkape extension for files
+  - This is how a target is defined for KAPE
+    - .tkape file contain info about the artifact that we want to collect, such as the path, category, & file masks to collect.
 
 ### Modules Options

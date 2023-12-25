@@ -1,0 +1,29 @@
+Targets:
+    -
+        Name: CompoundTarget1 # Required
+        Category: Category # Required
+        Path: CompoundTarget1.tkape # Required
+        Comments: "Comments go here" # Optional
+    -
+        Name: CompoundTarget2
+        Category: Category
+        Path: CompoundTarget2.tkape
+    -
+        Name: CompoundTarget3
+        Category: Category
+        Path: CompoundTarget1.tkape
+    -
+        Name: CompoundTarget4
+        Category: Category
+        Path: CompoundTarget2.tkape
+    -
+        Name: CompoundTarget5
+        Category: Category
+        Path: CompoundTarget1.tkape
+    -
+        Name: CompoundTarget6
+        Category: Category
+        Path: CompoundTarget2.tkape
+
+# Documentation
+# Please delete all Required/Optional comments above. N/A if no Documentation present. End with new line.
