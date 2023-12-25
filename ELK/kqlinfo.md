@@ -10,6 +10,9 @@
 ## Free text search:
 
 - Allows users to search for the logs based on the text-only.
+  - Used with parentheses () followed by what to is being looked for
+    - EX: looking for a host name google
+      - Rather then using the field name you can write (*google*) & this will look for all values in every event with the word google.
 
 ## Parameters/commands/Input
 

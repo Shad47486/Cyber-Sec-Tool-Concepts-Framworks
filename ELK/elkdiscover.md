@@ -4,7 +4,7 @@
 - This allows analyst to do the following tasks:
   - Search for the logs
   - Investigate anomalies
-  - Apply filter based on
+  - Apply filter based onTo Base
     - Search term
     - Time period
 

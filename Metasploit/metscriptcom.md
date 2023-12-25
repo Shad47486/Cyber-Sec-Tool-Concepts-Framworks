@@ -1,9 +1,11 @@
-# Commands/scripts:
+# Commands/scripts
 
-To get into CLI: 
+To get into CLI:
 "msfconsole"
     - ls ping clear (linux commands that can be used with metspolit)
-# Setting Parameters: 
+
+## Setting Parameters
+
 setg
     - You can use the setg command to set values that will be used for all modules.
 
@@ -29,11 +31,13 @@ set session
     - Each connection established to the target system using Metasploit will have a session ID. 
     - You will use this with post-exploitation modules that will connect to the target system using an existing connection.
 
-# TO unset parameters: 
+## TO unset parameters
+
 "unset"/"unset all"
     - Clear any parameter value using the unset command or clear all set parameters with the unset all command.
 
-# Commmands: 
+## Commmands
+
 exploit/run
     - You can use the setg command to set values that will be used for all modules.
 
