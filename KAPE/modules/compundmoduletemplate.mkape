@@ -1,0 +1,30 @@
+ExportFormat: csv
+FileMask: FileName.exe
+Processors:
+    -
+        Executable: Module1.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: Module2.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: Module3.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: Module4.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: Module5.mkape
+        CommandLine: ""
+        ExportFormat: ""
+    -
+        Executable: Module6.mkape
+        CommandLine: ""
+        ExportFormat: ""
+
+# Documentation
+# N/A if no Documentation present. End with new line. Be sure to check out the CompoundModuleGuide.guide for more information!

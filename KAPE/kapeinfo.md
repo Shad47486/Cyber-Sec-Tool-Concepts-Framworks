@@ -29,11 +29,19 @@
 - Targets are the artifacts that need to be collected from a system or image and copied to our provided destination.
   - EX: Windows prefetch folder can be used as a target.
     - Esentially targets copy files from one place to another.
-
 - Last 4 files at the bottom are guides & templates to create targets & Compount Targets of our own
 
 - Targets use the .tkape extension for files
   - This is how a target is defined for KAPE
-    - .tkape file contain info about the artifact that we want to collect, such as the path, category, & file masks to collect.
+    - *** .tkape file contain info about the artifact that we want to collect, such as the path, category, & file masks to collect.**
 
 ### Modules Options
+
+- Run specific tools against the provided set of files.
+  - Goal is not to copy files from one place to another but rather run some command and store the output.
+    - Ouput is generally CSV or TXT files.
+- Last 4 files at the bottom are guides & templates to create targets & Compount Targets of our own.
+
+- The bin directory contains executables that we want to run on the system but are not natively present on most systems.
+  - KAPE will run executables either from the bin directory or the complete path.
+    -  Eric Zimmerman's tools are examples of what can be kept in the bin directory (generally not present on windows sys)
