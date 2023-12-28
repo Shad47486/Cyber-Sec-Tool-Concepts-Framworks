@@ -64,3 +64,39 @@
   - Backups of the registry hives located in the C:\Windows\System32\Config directory
   - Hives are copied to the C:\Windows\System32\Config\RegBack directory every ten days.
 
+##  New Technology File System (NTFS) File System 
+
+- NTFS file system keeps a log of changes to the metadata in the volume
+  - Feature helps the system recover from a crash or data movement due to defragmentation.
+    - Log is stored in $LOGFILE in the volume's root directory
+  - Has access controls that define the owner of a file/directory and permissions for each user.
+  - keeps track of changes made to a file using a feature called Volume Shadow Copies
+    - Users can restore previous file versions for recovery or system restore
+      - Ransomware actors have been noted to delete the shadow copies on a victim's file systems to prevent them from recovering their data.
+  - Alternate data streams (ADS) allows files to have multiple streams of data stored in a single file.
+    - A file is a stream of data organized in a file system
+      - IE and other browsers use Alternate Data Streams to identify files downloaded from the internet (using the ADS Zone Identifier).
+      - Malware has also been observed to hide their code in ADS.
+
+### Master File Table for New Technology File System (NTFS) File System
+
+- $MFT 
+  - The $MFT is the first record in the volume.
+    - The Volume Boot Record (VBR) points to the cluster where it is located.
+  - $MFT stores information about the clusters where all other objects present on the volume are located.
+    - This file contains a directory of all the files present on the volume.
+
+- $LOGFILE
+  - The $LOGFILE stores the transactional logging of the file system.
+  - It helps maintain the integrity of the file system in the event of a crash.
+
+- $UsnJrnl
+  - It stands for the Update Sequence Number (USN) Journal.
+    - Present in the $Extend record.
+  - Contains info about all the files that were changed in the file system and the reason for the change.
+    - Also called the change journal.
+
+- TO VIEW DATA FROM THESE FILES USE MFT Explorer (MFTECmd) from Eric Zimmerman
+  - MFTECmd parses data from the different files created by the NTFS file system like $MFT, $Boot, etc
+    - Command to parsing using tool: 
+      - MFTECmd.exe -f <path-to-$MFT-file> --csv <path-to-save-results-in-csv>

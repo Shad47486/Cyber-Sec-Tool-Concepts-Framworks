@@ -45,3 +45,4 @@
 - The bin directory contains executables that we want to run on the system but are not natively present on most systems.
   - KAPE will run executables either from the bin directory or the complete path.
     -  Eric Zimmerman's tools are examples of what can be kept in the bin directory (generally not present on windows sys)
+
