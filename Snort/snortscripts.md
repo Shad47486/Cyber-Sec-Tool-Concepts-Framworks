@@ -10,7 +10,7 @@
 - sudo snort -c (file/path) -T
   - ex: sudo snort -c /etc/snort/snort.conf -T
 
-## SNIFFING with different Parameter/Commands "-i", "-v", "-d", "-de", "-X"
+## Sniffing with different parameter/commands "-i", "-v", "-d", "-de", "-X"
 
 - sudo snort -v-i (interface)
   - ex: sudo snort -v-i eth0

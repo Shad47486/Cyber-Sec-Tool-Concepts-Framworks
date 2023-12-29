@@ -108,7 +108,9 @@
       - Can use history to see what command is the 10th command written
   - !! means to exucte previous command
 
-
+- sudo gedit /path/to/file
+  - Lets you edit a file using the linux text editor (getdit)
+    - Can be useful when you need to go to multiple directorys and edit different files
 
 # parameters to add on besides pipes
 - a 

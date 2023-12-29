@@ -24,7 +24,7 @@ snort -[command]
     - May need to use sudo for some commands
       - Reason being could be due to ownership of certain logfiles
 
-## General Commands/parameters
+## General Commands/parameters for testing versions and rules using snort
 
 -V
     - This parameter provides information about your instance version.
@@ -42,7 +42,7 @@ snort -[command]
 -q
     - Quiet mode prevents snort from displaying the default banner and initial information about your setup.
 
-# Different Sniffer mode commands/parameters
+## Different Sniffer mode commands/parameters
 
 -v
     - Verbose
@@ -128,3 +128,12 @@ snort -[command]
 
 --pcap-show
     - Show pcap name on console during processing.
+
+### General Steps for brute force attacks
+
+1. Start Snort in sniffer mode & try to figure out the attack service & prot:
+   1. Make sure to test the snort console first and to use SUDO with appropriate commands
+2. Then Write an IPS rule & run SNORT in IPS mode to stop the brute-force Attack
+3. Make sure to do a scan on OUTBOUND traffic
+   3. Reasoning: All we did was deal with the threat actors trying to get in meaning a scan on the inbound traffic would help to see if any treat actors can get in, HOWEVER what about the ones that ALREADY ARE IN?
+      3. Can look for any outbound traffic that could relate to reverse shells
