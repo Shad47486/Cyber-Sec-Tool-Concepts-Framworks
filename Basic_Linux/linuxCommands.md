@@ -1,24 +1,25 @@
 # List of useful commands to use for linux to mannuver thru linux CMDS
-- ls 
 
-- cd [path] 
+- ls
+
+- cd [path]
   - Move back or foward within box
     - cd .. = moves back
     - cd ~ = home dir
-      - Or cd 
+      - Or cd
     - cd // = root dir
 
-- rm [file]= removes files/folders 
-    - rm -r [folder]= recersively deletes items inside a folder 
-      - Directories/Folders will not be deleted without the -r parameter
+- rm [file]= removes files/folders
+  - rm -r [folder]= recersively deletes items inside a folder
+    - Directories/Folders will not be deleted without the -r parameter
 
 - mv [file] [newfile] OR [file path for moving]
   - rename a file OR MOVE FILE
 
-- touch [file] = 
+- touch [file] =
   - Creates a file
 
-- mkdir [folder]= 
+- mkdir [folder]=
   - Creates a direcotry/folder
 
 - cp [file] [file2]
@@ -38,16 +39,16 @@
 - pwd
   - print working directory
 
-- grep 
+- grep
   - Allows us to search the contents of files for specific values that we are looking for.
     - Used with the pipe operand (|)
 
 - egrep
-  - searchs a given data set of data and print every line which contains a given pattern. 
+  - searchs a given data set of data and print every line which contains a given pattern.
     - Like "find word" in browser Example: egrep 'word' path
       - Used with the pipe operand (|)
 
-- awk 
+- awk
 
 - echo [file]
   - output any text that we provide
@@ -59,13 +60,13 @@
 - checksec
   - tells you security information about a file.
 
-- whois 
-  - Allows you to query who a domain name is registered to. 
-    - Syntax: 
+- whois
+  - Allows you to query who a domain name is registered to.
+    - Syntax:
       - whois <domain>
 
-- dig 
-  - Allows us to manually query recursive DNS servers of our choice for information about domains: 
+- dig
+  - Allows us to manually query recursive DNS servers of our choice for information about domains:
   - Syntax: 
     - dig <domain> @<dns-server-ip>
 
@@ -73,13 +74,13 @@
   - Helpful to find a specific file in the linux terminal
 
 - sudo
-  - Elevated privlages 
+  - Elevated privlages
     - Can elevate to root user using "sudo su"
 
 - chown
   - Changing ownership of files/directories
   - Can be used with sudo
-    - EX: 
+    - EX:
       - chown (username) (file)
       - chown (username) -R (directory)
         - -R means recursivly
@@ -94,14 +95,14 @@
 - strings [filename/path]
   - Lists down the strings present in a file
 
-- ssh user@ip 
+- ssh user@ip
   - Allows us to remotely execute commands on another device remotely.
     - Any data sent between the devices is encyrpoted when it is sent over a network such as the internet
 
 - histroy
   - Provides history of commands ran
 
-- !x or !! 
+- !x or !!
   - x represents the number of command excuted within session
   - ! represents the excution of command 
     - EX: !10 means run the 10th command from my histroy
@@ -112,18 +113,21 @@
   - Lets you edit a file using the linux text editor (getdit)
     - Can be useful when you need to go to multiple directorys and edit different files
 
-# parameters to add on besides pipes
-- a 
+
+## parameters to add on besides pipes
+
+- a
   - Short for all
     - ls -a
 
-# File hash commands:
+## File hash commands
+
 - Allows you to decrypt files using native commands:
   -md5sum [file]
   -sha1sum [file]
   -sha256sum [file]
 
-# Pipe Operand (|):
+## Pipe Operand (|)
 
 - Transfer of standard output to some other destination
   - Form of redirection
