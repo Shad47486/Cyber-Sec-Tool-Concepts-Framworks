@@ -5,7 +5,7 @@
        -  It is heavily focused on network analysis. 
        -  The detection mechanism is focused on events.
 
-## Pros:
+## Pros
 
 - It provides in-depth traffic visibility.
 - Useful for threat hunting.
@@ -14,13 +14,13 @@
 - Easy to read logs.
   - Well structured and tab-seperated ASCII files (requires some effort to read)
 
-## Common Use Cases:
+## Common Use Cases
 
 - Network monitoring.
 - In-depth traffic investigation.
 - Intrusion detecting in chained events.
 
-## Consists of 2 layers:
+## Consists of 2 layers
 
 - Event Engine layer:
   - Where the packets are processed
@@ -49,9 +49,10 @@
 - TLS Decryption
 
 ## What is the default log location for stored logs in ZEEK?
+
 /opt/zeek/logs/
 
-## Different Zeek Log Files:
+## Different Zeek Log Files
 
 - Network Protocol Logs (Files):
   - conn.log, dce_rpc.log, dhcp.log, dnp3.log, dns.log, ftp.log, http.log, irc.log, kerberos.log, modbus.log, modbus_register_change.log, mysql.log, ntlm.log, ntp.log, radius.log, rdp.log, rfb.log, sip.log, smb_cmd.log, smb_files.log, smb_mapping.log, smtp.log, snmp.log, socks.log, ssh.log, ssl.log, syslog.log, tunnel.log.
@@ -74,8 +75,7 @@
 - Zeek Diagnositc Logs Cover System Msgs, Actions, & Some Statistics (Files)
   - broker.log, capture_loss.log, cluster.log, config.log, loaded_scripts.log, packet_filter.log, print.log, prof.log, reporter.log, stats.log, stderr.log, stdout.log.
 
-
-## Most Commonly used log and how frequent they are updated:
+## Most Commonly used log and how frequent they are updated
 
 - known_hosts.log
   - List of hosts that completed TCP handshakes
@@ -105,7 +105,7 @@
   - List of triggered signatures
     - Updated PER SESSION
 
-## How Zeek Signatures are broken up:
+## How Zeek Signatures are broken up
 
 - Signatures ID:
   - Consists of Unique Signature Name
@@ -137,17 +137,17 @@
       - ==, !=, <, <=, >, >=
     - FILTERS accept string, numeric and regex values.
 
-- Actions: 
+- Actions:
   - Default Action: Create the "signatures.log" fgile in case of a signature match
   - Additional Action: Trigger a Zeek Script.
 
-## Signature files can consist of multiple signatures:
+## Signature files can consist of multiple signatures
 
 - Therefore we can have one file for each protocol/situation/threat type
 
-### Zeek Supports Snort rules aswell using a script called snort2bro, which converts snort rules to Zeek (also know as bro) signatures.
+*** Zeek Supports Snort rules aswell using a script called snort2bro, which converts snort rules to Zeek (also know as bro) signatures**
 
-## Zeek has its own event-driven scripting language:
+## Zeek has its own event-driven scripting language
 
 - Locations of scripts:
   - Already installed Zeek Scripts are found:
@@ -163,7 +163,7 @@
     - You can call scripts in live monitoring mode by loading them with the command load @/script/path or load @script-name in local.zeek file.
 - Zeek extension = .zeek
 
-## Zeeks different Frameworks:
+## Zeeks different Frameworks
 
 - You can easily see the usage of framworks in scripts by the script calling a specific framework
   - Typically seen as: load @ $PATH/base/frameworks/framework-nam
