@@ -24,4 +24,4 @@
 
 - zeekctl status
 - zeekctl start
-- zeekctl sto
+- zeekctl stop
