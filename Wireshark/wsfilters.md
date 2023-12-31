@@ -28,7 +28,7 @@
   - Pick the stream you want to follow (TCP, UDP, TLS, HTTP, HTTP/2, QUIC)
     - Following the protocol, streams help analyst recreate the app-level data & understand the event of intrest.
       - It is also possible to view the unencrypted protocol data like usernames, passwords, & other transferred data.
-      - After following a stream Wireshark automatically creates & applies the req filter to view the specific stream 
+      - After following a stream Wireshark automatically creates & applies the req filter to view the specific stream
         - Can use X button located on the right upper side of the display filter bar to remove the display filter
 
 ## Caputre Filter Syntax  (Commands/Operators used in display filter search bar)
@@ -82,44 +82,82 @@
       - Logical NOT
         - EX: !(ip.src == 10.10.10.222)
 
+## Capture Filtering (Protocol Filtering)
 
-## Capture Filtering (Protocol Filtering) (Commands/Operators used in display filter search bar)
+- Commands/Operators used in display filter search bar for differnet fields like IPs, TCP ports, UDP ports, HTTP/HTTPS/DNS
 
 - IP Filters (Used with Display Filter Search Bar):
   - Help analyst Filter the traffic according to IP lvl info from the packets (NETWORK LAYER or layer 3 of OSI)
     - Gives info such as IP addresses, version, TTL (time to live), type of service, flags, & checksum values.
-  - Common Filters include:
-    - ip
-      - Shows all ip packets
-    - ip.addr == 10.10.10.111
-      - Shows all packets containing IP address 10.10.10.111
-    - ip.addr == 10.10.10.0/24
-      - Show all packets containing IP addresses from 10.10.10.0/24 subnet.
-    - ip.src == 10.10.10.111
-      - Show all packets originated from 10.10.10.111
-    - ip.dst == 10.10.10.111
-      - Show all packets sent to 10.10.10.111
-    - ip.addr vs ip.src/ip.dst
-      - ip.addr filters the traffic w/o considering the packet direction.
-      - The ip.src/ip.dst filters the packet depending on the packet direction.
+- Common Filters include:
+  - ip
+    - Shows all ip packets
+  - ip.addr == 10.10.10.111
+    - Shows all packets containing IP address 10.10.10.111
+  - ip.addr == 10.10.10.0/24
+    - Show all packets containing IP addresses from 10.10.10.0/24 subnet.
+  - ip.src == 10.10.10.111
+    - Show all packets originated from 10.10.10.111
+  - ip.dst == 10.10.10.111
+    - Show all packets sent to 10.10.10.111
+  - ip.addr vs ip.src/ip.dst
+    - ip.addr filters the traffic w/o considering the packet direction.
+    - The ip.src/ip.dst filters the packet depending on the packet direction.
 
 - TCP & UDP Filters (Used with Display Filter Search Bar):
   - Helps analysts filter the traffic according to protocol-level info from the packets
     - Transport layer of the OSI model & include info such as:
       - Source & destination ports, sequence number, acknowledgement number, windows size, timestamps, flags, length & protocol errors.
-  - Common Filters Include:
-    - tcp.port == 80
-      - Show all TCP packets with port 80
-    - tcp.srcport == 1234
-      - Show all TCP packets originating from port 1234
-    - tcp.dstport == 80
-      - Show all TCP packets sent to port 80
-    - udp.port == 53
-      - Show all UDP packets with port 53
-    - udp.srcport == 1234
-      - Show all UDP packets originating from port 1234
-    - udp.dstport == 5353
-      - Show all UDP packets sent to port 5353
+
+- Common Filters (TCP):
+  - tcp
+    - Global search
+  - tcp.port == 80
+    - Show all TCP packets with port 80
+  - tcp.srcport == 1234
+    - Show all TCP packets originating from port 1234
+  - tcp.dstport == 80
+    - Show all TCP packets sent to port 80
+  - tcp.flags == 2
+    - Shows Only SYN flag
+      - tcp.flags.syn == 1
+        - SYN flag is set.
+  - tcp.flags == 16
+    - Shows Only ACK flag.
+      - tcp.flags.ack == 1
+        - ACK flag is set.
+  - tcp.flags == 18
+    - Shows Only SYN, ACK flags.
+      - (tcp.flags.syn == 1) and (tcp.flags.ack == 1)
+        - SYN and ACK are set.
+  - tcp.flags == 4
+    - Shows Only RST flag.
+      - tcp.flags.reset == 1
+        - RST flag is set.
+  - tcp.flags == 20
+    - Shows Only RST, ACK flags.
+      - (tcp.flags.reset == 1) and (tcp.flags.ack == 1)
+        - RST and ACK are set
+  - tcp.flags == 1
+    - Shows Only FIN flag
+      - tcp.flags.fin == 1
+        - FIN flag is set.
+  - tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size > 1024
+    - Shows # of TCP Connect scan patterns in a capture file.
+  - tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024
+    - Shows # of TCP SYN scan patterns in a capture file
+
+- Common Filters (UDP):
+  - udp
+    - Global search
+  - udp.port == 53
+    - Shows all UDP packets with port 53
+  - udp.srcport == 1234
+    - Shows all UDP packets originating from port 1234
+  - udp.dstport == 5353
+    - Shows all UDP packets sent to port 5353
+  - icmp.type==3 and icmp.code==3
+    - Shows # of UDP scan patterns in a capture file.
 
 - Application Level Protocol Fiters (HTTP & DNS) (Used with Display Filter Search Bar):
   - Help analysts filter the traffic according to apps protocol level info from the packets
@@ -142,6 +180,25 @@
       - Show all DNS responses
     - dns.qry.type == 1
       - Show all DNS "A" records
+
+- Address Resolution Protocol (ARP) Filters:
+  - Technology responsible for allowing devices to identify themselves on a network.
+    - Helps deal with ARP poisoning/spoofing/MITM attacks
+- Common Filter (ARP):
+  - arp
+    - Global Search
+  ***Commands for grabbing Low hanging fruits Below***
+  - arp.opcode == 1
+    - Opcode 1: ARP requests.
+  - arp.opcode == 2
+    - Opcode 2: ARP responses.
+  - arp.dst.hw_mac==00:00:00:00:00:00
+    - Hunt: Arp scanning
+  - arp.duplicate-address-detected or arp.duplicate-address-frame
+    - Hunt: Possible ARP poisoning detection
+  - ((arp) && (arp.opcode == 1)) && (arp.src.hw_mac == target-mac-address)
+    - Hunt: Possible ARP flooding from detection
+  ***Commands for grabbing Low hanging fruits Above***
 
 - Display Filter Expressions (Used with Display Filter Search Bar):
   - Stores all supported protocol structures to help analysts create display filters

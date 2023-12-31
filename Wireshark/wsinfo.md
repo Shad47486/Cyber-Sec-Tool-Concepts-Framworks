@@ -104,4 +104,3 @@
   - In file tab
     - Important an analyst discover shared files & saves them for further investigation
       - Works for Protocols steams: DICOM, HTTP, IMF, SMB, TFTP
-
