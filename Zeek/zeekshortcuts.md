@@ -21,6 +21,7 @@ zeek -C -r sample.pcap
   - Cuts specific columns from zeek logs
     - EX:
       - cat signatures.log | zeek-cut uid src_addr dst_addr
+        - [More info on specific zeek data/fields](<https://corelight.com/products/zeek-data/>)
 
 ## Loading local scripts
 

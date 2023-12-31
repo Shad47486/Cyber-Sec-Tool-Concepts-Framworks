@@ -1,4 +1,4 @@
-# Zeek Package Manager helps users install third-party scripts and plugins to extend Zeek functionalities with ease.
+# Zeek Package Manager helps users install third-party scripts and plugins to extend Zeek functionalities with ease
 
 - Is installed with zeek and can be used with 'zkg' command
   - Users can load, remove, update, & create packages with the "zkg" tool
@@ -9,7 +9,8 @@
   - Install a package. Example (zkg install zeek/j-gras/zeek-af_packet-plugin).
 
 - zkg install git_url
-  - Install package. Example (zkg install https://github.com/corelight/ztest).
+  - Install package. Example
+    - [zkg install](<https://github.com/corelight/ztest>)
 
 - zkg list
   - List installed package.
@@ -22,7 +23,6 @@
 
 - zkg upgrade
   - Update installed packages.
-
 
 ## Different Packages that can be installed
 
