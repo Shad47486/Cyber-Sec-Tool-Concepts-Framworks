@@ -3,9 +3,9 @@
 - Collection of databases that contains the system's configuration data.
   - This configuration data can be about the hardware, the software, or the user's information.
     - Also includes data about the recently used files, programs used, or devices connected to the system.
-      - Consists of Keys and Values. 
-        - When you open the regedit.exe utility to view the registry, the folders you see are Registry Keys. 
-          - Registry Values are the data stored in these Registry Keys. 
+      - Consists of Keys and Values.
+        - When you open the regedit.exe utility to view the registry, the folders you see are Registry Keys.
+          - Registry Values are the data stored in these Registry Keys.
             - A Registry Hive is a group of Keys, subkeys, and values stored in a single file on the disk.
 
 ## Structure of registry (can be viewed using regedit.exe) in the run prompt
@@ -35,7 +35,7 @@
 - HKEY_CURRENT_CONFIG
   - Contains information about the hardware profile that is used by the local computer at system startup.
 
-## If you only have access to a disk image, you must know where the registry hives are located on the disk. The majority of these hives are located in the C:\Windows\System32\Config directory and are:
+## If you only have access to a disk image, you must know where the registry hives are located on the disk. The majority of these hives are located in the C:\Windows\System32\Config directory and are
 
 1. DEFAULT (mounted on HKEY_USERS\DEFAULT)
 2. SAM (mounted on HKEY_LOCAL_MACHINE\SAM)
@@ -64,7 +64,7 @@
   - Backups of the registry hives located in the C:\Windows\System32\Config directory
   - Hives are copied to the C:\Windows\System32\Config\RegBack directory every ten days.
 
-##  New Technology File System (NTFS) File System 
+## New Technology File System (NTFS) File System
 
 - NTFS file system keeps a log of changes to the metadata in the volume
   - Feature helps the system recover from a crash or data movement due to defragmentation.

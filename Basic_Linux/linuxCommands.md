@@ -113,7 +113,6 @@
   - Lets you edit a file using the linux text editor (getdit)
     - Can be useful when you need to go to multiple directorys and edit different files
 
-
 ## parameters to add on besides pipes
 
 - a

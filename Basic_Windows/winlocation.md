@@ -1,8 +1,8 @@
 # Locations that are good to know about & what these files/folders/registries do
 
-## Good first step in windows forensics is to make to get System Info such as:
+## Good first step in windows forensics is to make to get System Info such as
 
-- OS Version: 
+- OS Version:
   - Location: SOFTWARE\Microsoft\Windows NT\CurrentVersion
 
 - Control Sets:

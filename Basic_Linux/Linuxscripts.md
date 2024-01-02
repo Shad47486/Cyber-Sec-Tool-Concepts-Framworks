@@ -2,7 +2,7 @@
 
 - sudo su
 
-# Find and Filter files
+## Find and Filter files
 
 - Cut the 1st field:
   - cat test.txt | cut -f 1
@@ -53,18 +53,18 @@
 
 - sort -nr
 
-# Split the string on every dot & print keep the 1st two fields
+## Split the string on every dot & print keep the 1st two fields
 
 - cut -d '.' -f 1-2
 
-# Display lines that don't match the "test" string
+## Display lines that don't match the "test" string
 
 - grep -v 'test'
 
-# Display Lines that dont match one or both "test1' & 'test2' strings
+## Display Lines that dont match one or both "test1' & 'test2' strings
 
 - grep -v -e 'test1' -e 'test2'
 
-# search the "testvalue1: string everywhere, organise column spaces & view the output with less
+## search the "testvalue1: string everywhere, organise column spaces & view the output with less
 
 - grep -rin Testvalue1 * | column -t | less -S
