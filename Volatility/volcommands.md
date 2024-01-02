@@ -1,12 +1,14 @@
-# Syntax: 
-python3 vol.py [parameter/command] [os].[plugin]
-    - OS can be mac., windows., linux.
+# Syntax
 
-## parameter/command: 
--h 
-    - Help 
+- python3 vol.py [parameter/command] [os].[plugin]
+  - OS can be mac., windows., linux.
 
--f 
+## parameter/command
+
+-h
+    - Help
+
+-f
     - file path/name
       - Typically using a file named 'vmem' WITH PARANTHESIS
 
@@ -37,7 +39,7 @@ os.malfind
     - MZ header is an indicator of a os executable file.
 
 os.yarascan
-    - will search for strings, patterns, and compound rules against a rule set. 
+    - will search for strings, patterns, and compound rules against a rule set.
     - You can either use a YARA file as an argument or list rules within the command line.
 
 os.ssdt
@@ -51,5 +53,5 @@ os.modules
     - Also Works as a way to scan for drivers
 
 os.driverscan
-    - Scan for drivers present on the system at the time of extraction 
-    - Can help identify driver files in the kernel that the modules plugin might have missed or were hidden? 
+    - Scan for drivers present on the system at the time of extraction
+    - Can help identify driver files in the kernel that the modules plugin might have missed or were hidden?

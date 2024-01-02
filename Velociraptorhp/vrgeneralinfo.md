@@ -7,7 +7,6 @@
       - Can be deployed on ALOT (OVER ~10000!!) of client endpoints
       *** COOl NOTE: Rapid 7 & VR work togetherish**
 
-
 ## How Does VR work with other sys?
 
 - Using Linux to run the VR as a server & executing a second VR exe to run as an agent on the client side (windows)
@@ -40,7 +39,7 @@
   - ntfs - uses raw NTFS parsing to access low level files
   - registry - uses operating system APIs to access the Windows registry
   - artifacts - previously run collections.
-    - When any folder is clicked  in the left pane, additional details are displayed in the middle pane. 
+    - When any folder is clicked  in the left pane, additional details are displayed in the middle pane.
       - For example, if the file folder is clicked, a subfolder will appear, which is C:. Now the details in the middle pane change to reflect C:.
 
 - As well as 3 buttons on the top of the middle pane:

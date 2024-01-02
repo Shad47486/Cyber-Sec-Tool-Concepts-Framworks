@@ -47,7 +47,7 @@
   - You can specify the number of processes with the parameter "-n"
     - EX:  snort -dvr logname.log -n 10
 
-# Snort in IDS/IPS Mode
+## Snort in IDS/IPS Mode
 
 - sudo snort -c /etc/snort/snort.conf -N
 - Disables logging (-N)

@@ -7,7 +7,7 @@
 
 [Other commands in KQL](<https://www.elastic.co/guide/en/kibana/7.17/kuery-query.html>)
 
-## Free text search:
+## Free text search
 
 - Allows users to search for the logs based on the text-only.
   - Used with parentheses () followed by what to is being looked for

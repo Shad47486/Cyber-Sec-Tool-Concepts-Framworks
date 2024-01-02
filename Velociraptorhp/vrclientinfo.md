@@ -2,7 +2,7 @@
 
 - [Refering to documentation for any questions](<https://docs.velociraptor.app/docs/gui/clients/>)
 
-## Shells 
+## Shells
 
 - VR can use the Client-Server model deployment to use the servers shells (powershell, bash, CMD, or VQL) to exe remotely to the server machine (Linux) from the client side (windows)
   - Thanks to WSL (windows Subsystem for Linux) this remote exe is possible.

@@ -36,7 +36,6 @@
     - **SOMETHING TO NOTE ABOUT THE CYBER KC is that we don't need to follow the sequence of the cyber kill chain during the Investigation bc One finding in one phase will lead to another finding that may have mapped into some other phase. ***
       - Good to use OSINT tool when needed
 
-
 ## Log Sources for investigations that could be helpful
 
 - wineventlog

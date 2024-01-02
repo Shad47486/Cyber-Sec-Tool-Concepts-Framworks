@@ -3,12 +3,12 @@
 - Open-source, freely available & extensive EDR solution.
 - Uses Management & Agent deployment
   - Manger is responsible for managing agents installed on the devices you'd like to monitor.
-  - Agents monitor the processes & events that take place on the device, such as authentication and user management. 
+  - Agents monitor the processes & events that take place on the device, such as authentication and user management.
     - Agents will offload these logs to a designated collector for processing, such as Wazuh.
 - Capable of auditing & monitoring on agent's configuration whilst proavtively recording event logs.
   - Audting Metrics Based on NIST, MITRE, GDPR
 
-## Setting up/Features/Commands:
+## Setting up/Features/Commands
 
 - [How to setup agents in windows OS](./agentsyswin.md)
 
@@ -17,9 +17,9 @@
 
 - [Setting up API](./wauzhapi.md)
 
-## File locations:
+## File locations
 
-- Specific alerts file Wazuh Managment Server file: 
+- Specific alerts file Wazuh Managment Server file:
   - /var/ossec/logs/alerts/alerts.log
 
 - Agent File Location:

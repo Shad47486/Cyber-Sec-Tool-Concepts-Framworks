@@ -58,7 +58,7 @@ snort -[command]
     - Display the full packet details in HEX
 
 -i
-    - This parameter helps to define a specific network interface to listen/sniff. 
+    - This parameter helps to define a specific network interface to listen/sniff.
       - Once you have multiple interfaces, you can choose a specific interface to sniff.
 
 ## Packet Logger Mode commands/parameters
@@ -97,7 +97,7 @@ snort -[command]
 -A
     - ALERT MODES (5 options);
       - full:
-        - Full alert mode, providing all possible information about the alert. 
+        - Full alert mode, providing all possible information about the alert.
           - This one also is the default mode; once you use -A and don't specify any mode, snort uses this mode.
             - No console output for this mode
             -  contain all possible information on the action.

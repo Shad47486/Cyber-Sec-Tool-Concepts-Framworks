@@ -19,11 +19,11 @@
 
 - Case/Task Management:
   - Every investigation is meant to correspond to a case that has been created.
-    - Each case can be broken down into one or more tasks for added granularity & even be turned into templates for easier management. 
+    - Each case can be broken down into one or more tasks for added granularity & even be turned into templates for easier management.
       - Analysts can also record their progress, attach pieces of evidence or noteworthy files, add tags & other archives to cases.
   
 - Alert Triage:
-  - Cases can be imported from SIEM alerts, email reports & other security event sources. 
+  - Cases can be imported from SIEM alerts, email reports & other security event sources.
     - Feature allows an analyst to go through the imported alerts & decide whether or not they are to be escalated into investigations or incident response.
 
 - Observable Enrichment with Cortex:

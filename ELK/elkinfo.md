@@ -50,16 +50,13 @@
       - Functionbeat:
         - Lightweight Shipper for cloud data.
 
-
 ## Kibana
 
 - Web-based data visualization that works with elasticsearch to analyze, investigate and visualize the data stream in real-time.
   - Allows Users to create multiple visualizations and dashboards for better visibility
 
-
-### Visualization tab allows us to visualize the data in different forms like Table, Pie charts, Bar charts, etc.
+### Visualization tab allows us to visualize the data in different forms like Table, Pie charts, Bar charts, etc
 
 - To visuals go to one of the filter by fields options and then pick the visualize button at the buttom of all the other values
-
 
 ### Can build Dashboards as well going to the left menu and dashboard option

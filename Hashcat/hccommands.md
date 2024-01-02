@@ -1,11 +1,12 @@
-# Syntax: 
+# Syntax
+
 hashcat [command]
 
-# Parameters/commands:
+## Parameters/commands
 
--m 
-    - hashtype
+- -m
+  - hashtype
 
--a 
-    - attack mode 
-      - 0 = straight, 1 = combination, 3 = bruteforce, 6 = hybridwordlist, 7 = hybrid mask
+- -a
+  - attack mode
+    - 0 = straight, 1 = combination, 3 = bruteforce, 6 = hybridwordlist, 7 = hybrid mask

@@ -20,15 +20,15 @@
       - Represented in the Intel x86 CPU family they are represented with 0x90, following which the CPU will do nothing for one cycle
 
 - Payloads:
-  - Codes that will run on the target system. 
+  - Codes that will run on the target system.
   - Metasploit offers the ability to send different payloads that can open shells on the target system.
     - 4 different directors under payload: adapters, singles, stagers, stages
       - Adapters = Wraps single payloads to convert them into different formats.
         - EX: A normal single payload can be wrapped inside a PowerShell adapter, which will make a single PowerShell command that will execute the payload.
-      - Singles/Inlines = Self-contained payloads that do not need to download an additional component to run. 
+      - Singles/Inlines = Self-contained payloads that do not need to download an additional component to run.
         - Add user, launch notepad.exe, etc.
       - Stagers
-        - Responsible for setting up a connection channel between Metasploit and the target system. 
+        - Responsible for setting up a connection channel between Metasploit and the target system.
           - Good for working with stage payloads
             - Stagers (Staged Payloads)
               - Will first upload a stager on the target system then download the rest of the payload (stage) Provides some advantages as the initial size of the payload will be relatively small compared to the full payload sent at once.

@@ -1,4 +1,4 @@
-# Impacket 
-    - 
+# Impacket
+ 
 
-# Syntax: 
+## Syntax

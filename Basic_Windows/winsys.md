@@ -98,5 +98,5 @@
 
 - TO VIEW DATA FROM THESE FILES USE MFT Explorer (MFTECmd) from Eric Zimmerman
   - MFTECmd parses data from the different files created by the NTFS file system like $MFT, $Boot, etc
-    - Command to parsing using tool: 
+    - Command to parsing using tool:
       - MFTECmd.exe -f <path-to-$MFT-file> --csv <path-to-save-results-in-csv>

@@ -1,4 +1,4 @@
-#  Collecting Windows Logs with Wazuh
+# Collecting Windows Logs with Wazuh
 
 - All sorts of actions and events are captured and recorded on a Windows
   - Includes:

@@ -1,6 +1,7 @@
 # List of useful commands to use for linux to mannuver thru linux CMDS
 
 - ls
+  - Shows what is currently in the dir/folder
 
 - cd [path]
   - Move back or foward within box
@@ -67,7 +68,7 @@
 
 - dig
   - Allows us to manually query recursive DNS servers of our choice for information about domains:
-  - Syntax: 
+  - Syntax:
     - dig <domain> @<dns-server-ip>
 
 - find
@@ -104,7 +105,7 @@
 
 - !x or !!
   - x represents the number of command excuted within session
-  - ! represents the excution of command 
+  - ! represents the excution of command
     - EX: !10 means run the 10th command from my histroy
       - Can use history to see what command is the 10th command written
   - !! means to exucte previous command

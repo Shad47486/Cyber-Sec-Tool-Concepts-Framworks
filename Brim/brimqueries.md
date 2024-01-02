@@ -28,7 +28,7 @@
 
 - Communicated Hosts
   - Identifying the list of communicated hosts is the first step of the investigation.
-  - Helps analysts to detect possible access violations, exploitation attempts and malware infections.-r 
+  - Helps analysts to detect possible access violations, exploitation attempts and malware infections.-r
     - _path=="conn" | cut id.orig_h, id.resp_h | sort | uniq
 
 - Frequently Communicated Hosts:
@@ -78,6 +78,6 @@
 
 - Known Patterns:
   - Alerts are generated against the common attack/threat/malware patterns and known by endpoint security products, firewalls and IDS/IPS solutions
-    - This data source highly relies on available signatures, attacks and anomaly patterns. 
+    - This data source highly relies on available signatures, attacks and anomaly patterns.
       - Investigating available log sources containing alerts is vital for a security analyst.
       - event_type=="alert" or _path=="notice" or _path=="signatures"

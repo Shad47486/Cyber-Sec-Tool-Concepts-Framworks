@@ -221,26 +221,26 @@
   - dhcp.option.dhcp == 3
     - Packets contain the hostname information
       - "DHCP Request"
-        - Grabbing Low Handing Fruits with DHCP Requests
-          - dhcp.option.hostname contains "keyword"
-            - Option 12: Hostname.
-            - Option 50: Requested IP address.
-            - Option 51: Requested IP lease time.
-            - Option 61: Client's MAC address.
+    - Grabbing Low Handing Fruits with DHCP Requests
+      - dhcp.option.hostname contains "keyword"
+        - Option 12: Hostname.
+        - Option 50: Requested IP address.
+        - Option 51: Requested IP lease time.
+        - Option 61: Client's MAC address.
   - dhcp.option.dhcp == 5
     - Packets represent the accepted requests
       - "DHCP ACK"
-        - Grabbing Low Handing Fruits with DHCP ACK
-          - dhcp.option.domain_name contains "keyword"
-            - Option 15: Domain name.
-            - Option 51: Assigned IP lease time.
+    - Grabbing Low Handing Fruits with DHCP ACK
+      - dhcp.option.domain_name contains "keyword"
+        - Option 15: Domain name.
+        - Option 51: Assigned IP lease time.
   - dhcp.option.dhcp == 6
     - Packets represent denied requests
       - "DHCP NAK"
-        - Grabbing Low Handing Fruits with DHCP ACK
-          - Option 56: Message (rejection details/reason).
-            - These msgs can be uniq according to the case/situation, it is suggested to read the msg instead of filtering it
-              - Analyst could create a more reliable hypothesis/result by understanding the event circumstances.
+    - Grabbing Low Handing Fruits with DHCP ACK
+      - Option 56: Message (rejection details/reason).
+        - These msgs can be uniq according to the case/situation, it is suggested to read the msg instead of filtering it
+          - Analyst could create a more reliable hypothesis/result by understanding the event circumstances.
 
 - Common Filters for NetBIOS (Network Basic Input/Output System or NBNS) Analysis:
   - nbns
@@ -256,7 +256,7 @@
   - kerberos.CNameString contains "keyword"
     - User account search:
       - CNameString: The username
-    - kerberos.CNameString and !(kerberos.CNameString contains "$" )
+    - kerberos.CNameString and !(kerberos.CNameString contains "$")
       - Some packets could provide hostname information in this field.
         - To avoid this confusion, filter the "$" value. The values end with "$" are hostnames, and the ones without it are user names.
   - Grabbing the low-hanging fruits:

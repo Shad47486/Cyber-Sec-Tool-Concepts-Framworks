@@ -1,4 +1,4 @@
-# Wazuh management server features a rich and extensive API to allow the Wazuh management server to be interacted with using the command line.
+# Wazuh management server features a rich and extensive API to allow the Wazuh management server to be interacted with using the command line
 
 - Must authenticate 1st by providing valid set of credentials to the awuthentication endpoint.
 
@@ -15,7 +15,7 @@
 
 - Want to list stats & important info about the Wazuh Managment Server
   - curl -k -X GET "https://Wazuhmanagementserverip/manager/configuration?pretty=true§ion=global" -H "Authorization: Bearer $TOKEN"
-- Want to interact with an agent: 
+- Want to interact with an agent:
   - curl -k -X GET "https://Wazuhmanagementserverip/agents?pretty=true&offset=1&limit=2&select=status%2Cid%2Cmanager%2Cname%2Cnode_name%2Cversion&status=active" -H "Authorization: Bearer $TOKEN"
 
 - Reminder, the syntax for running queries uses the same web methods (i.e. GET/PUT/POST) and endpoints (i.e. /manager/info) as you would use with curl.

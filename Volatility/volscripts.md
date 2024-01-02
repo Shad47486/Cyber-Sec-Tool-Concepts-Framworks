@@ -1,32 +1,44 @@
-# Provides info about the host from the mem dump command below:
-python3 vol.py -f <file> windows.info
-    - windows.info or linux.info
+# Commands/scripts for vol
 
-# Basic way to get a listing of processes being used:
-python3 vol.py -f <file> windows.pslist
-# If process is attempting to hide their processes can change command to: 
-python3 vol.py -f <file> windows.psscan
+## Provides info about the host from the mem dump command below
 
+- python3 vol.py -f <file> windows.info
+  - windows.info or linux.info
 
-# Listing all processes based on their parent process ID
-python3 vol.py -f <file> windows.pstree
+## Basic way to get a listing of processes being used
 
-# Identifying the network connections present at the time of extraction on the host machine:
-python3 vol.py -f <file> windows.netstat
-    - Can be unstable
+- python3 vol.py -f <file> windows.pslist
 
-# Listing All DLLs (Dynamic Link Library) associated with processes at the time of extraction:
-python3 vol.py -f <file> windows.dlllist
+## If process is attempting to hide their processes can change command to
 
-# Identifying injected processes, PID, & Offset address (Hex, ASCII, & Disassembly view)
-python3 vol.py -f <file> windows.malfind
+- python3 vol.py -f <file> windows.psscan
 
-# Compare the mem file against yara rules:
-python3 vol.py -f <file> windows.yarascan
+## Listing all processes based on their parent process ID
 
-# Searching for hooking & output its results
-python3 vol.py -f <file> windows.ssdt
+- python3 vol.py -f <file> windows.pstree
 
-# Searching for malicious driver files (2 methods)
-python3 vol.py -f <file> windows.modules
-python3 vol.py -f <file> windows.driverscan
+## Identifying the network connections present at the time of extraction on the host machine
+
+- python3 vol.py -f <file> windows.netstat
+  - Can be unstable
+
+## Listing All DLLs (Dynamic Link Library) associated with processes at the time of extraction
+
+- python3 vol.py -f <file> windows.dlllist
+
+## Identifying injected processes, PID, & Offset address (Hex, ASCII, & Disassembly view)
+
+- python3 vol.py -f <file> windows.malfind
+
+## Compare the mem file against yara rules
+
+- python3 vol.py -f <file> windows.yarascan
+
+## Searching for hooking & output its results
+
+- python3 vol.py -f <file> windows.ssdt
+
+## Searching for malicious driver files (2 methods)
+
+- python3 vol.py -f <file> windows.modules
+- python3 vol.py -f <file> windows.driverscan

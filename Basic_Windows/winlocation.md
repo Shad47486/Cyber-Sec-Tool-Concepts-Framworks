@@ -141,4 +141,4 @@
 - USB device Volume Name:
   - Device name of the connected drive
     - Location: SOFTWARE\Microsoft\Windows Portable Devices\Devices
-      - We can compare the GUID we see here in this registry key and compare it with the Disk ID we see on keys mentioned in device identification to correlate the names with unique devices. 
+      - We can compare the GUID we see here in this registry key and compare it with the Disk ID we see on keys mentioned in device identification to correlate the names with unique devices.

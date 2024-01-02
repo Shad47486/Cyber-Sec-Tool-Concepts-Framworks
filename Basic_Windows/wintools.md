@@ -3,7 +3,6 @@
 - Recommended practice to image the system or make a copy of the required data and perform forensics on it.
   - Process is called data acquisition.
 
-
 ## What are Data Acquisition Tools that can be used with Windows?
 
 - Some Registry Hives are restricted, like %WINDIR%\System32\Config, meaning to aquire these files we need to use tools like:

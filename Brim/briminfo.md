@@ -28,7 +28,7 @@
   - General Info of the pcap file
     - Provides info that is valuable for accomplishing further investigation and creating custom queries.
 
-- Windows Networking Activity: 
+- Windows Networking Activity:
   - Focuses on Windows networking activity and details the source and destination addresses and named pipe, endpoint and operation detection.
     - Helps investigate and understand specific Windows events like SMB enumeration, logins and service exploiting.
 

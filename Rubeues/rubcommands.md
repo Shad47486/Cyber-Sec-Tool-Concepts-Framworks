@@ -1,6 +1,8 @@
-# Syntax: 
-Rubeus.exe [command]
+# Syntax
 
-## Parameters/command: 
+- Rubeus.exe [command]
 
-kerberoast - Dumps the kerberos hash of any kerberoastable users
+## Parameters/command
+
+- kerberoast
+  - Dumps the kerberos hash of any kerberoastable users

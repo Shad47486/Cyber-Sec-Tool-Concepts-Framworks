@@ -5,4 +5,4 @@
     - A security analyst should identify the network patterns created with it.
       - Used as a CLI tool
 
-## TCP flags in a nutshell.
+## TCP flags in a nutshell

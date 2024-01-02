@@ -1,7 +1,9 @@
-## Syntax: 
+# Syntax
+
 enum4linux [Command] [Target-ip]
 
-## Commands/parameters: 
+## Commands/parameters
+
 -n = This command focuses on the NetBIOS part of the enum4linux tool
 
 -a = All Enumeration Options
