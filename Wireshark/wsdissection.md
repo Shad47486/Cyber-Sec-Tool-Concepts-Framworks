@@ -82,7 +82,7 @@
       - However, it only shows the second occurrence of the duplicate value to highlight the conflict
         - Therefore, identifying the malicious packet from the legitimate one is the analyst's challenge!
         **TIPS/QUESTIONS!!**
-          - Network architecture & inspecting the traffic for a specific time frame can help detect the anomaly.
+          - Good to know network architecture & inspecting the traffic for a specific time frame can help detect the anomaly.
           - Is there a flood of ARP requests?
             - what mac address is it comming from?
           - Is there Malicious activity, scan or network problems?
@@ -97,3 +97,85 @@
   - Not a routable protocol
   - It doesn't have an authentication function
     - Common patterns are request & response, announcement and gratuitous packets.
+
+## Identifying Hosts/Analaysis: DHCP, NetBIOS and Kerberos
+
+- When investigating a compromise or malware infection activity, a security analyst should know how to identify the hosts on the network apart from IP to MAC address match.
+  - One of the best methods is identifying the hosts and users on the network to decide the investigation's starting point and list the hosts and users associated with the malicious traffic/activity.
+    - Typically enterprise networks use a predefined pattern to name users and hosts. While this makes knowing and following the inventory easier, it has good and bad sides.
+      - Makes it easy to identify a user or host by looking at a name, However, it will be easy to clone that pattern and live in the enterprise network for adversaries.
+      - Protocols that can be used in Host and User identification:
+        - Dynamic Host Configuration Protocol (DHCP) traffic
+        - NetBIOS (NBNS) traffic
+        - Kerberos traffic
+
+## ### Tunneling Traffic: Domain Name System (DNS)/ICMP/ Analysis
+
+- Involves looking into data coming from Traffic tunnelling/Port Fowarding by looking at different protocols such as, ICMP and Domain Name System (DNS):
+  - Traffic tunnelling/Port Fowarding Involves transferring the data/resources in a secure method to network segments and zones.
+    - This encapsulates the data so its good for enterprise use.
+      - HOWEVER, attackers can use tunnelling to bypass security perimeters using the standard and trusted protocols used in everyday traffic like ICMP and Domain Name System (DNS).
+        - ICMP Analysis:
+          - Designed for diagnosing and reporting network communication issues.
+          - Highly used in error reporting and testing.
+            - As it is a trusted network layer protocol, sometimes it is used for denial of service (DoS) attacks; also, adversaries use it in data exfiltration and C2 tunnelling activities.
+          - ICMP tunnelling attacks are anomalies appearing/starting after a malware execution or vulnerability exploitation.
+            - As the ICMP packets can transfer an additional data payload, adversaries use this section to exfiltrate data and establish a C2 connection.
+              - It could be a TCP, HTTP or SSH data
+                - However, Most enterprise networks block custom packets or require administrator privileges to create custom ICMP packets.
+                  - A large volume of ICMP traffic or anomalous packet sizes are indicators of ICMP tunnelling
+                    - Adversaries could create custom packets that match the regular ICMP packet size (64 bytes), so it is still cumbersome to detect these tunnelling activities.
+        - Domain Name System (DNS) Analysis:
+          - Designed to translate/convert IP domain addresses to IP addresses (phonebook of the internet).
+            - Since its essential for web service it is commonly used and trusted, and therefore often ignored
+          - Similar to ICMP tunnels, DNS attacks are anomalies appearing/starting after a malware execution or vulnerability exploitation.
+            - Adversary creates (or already has) a domain address and configures it as a C2 channel.
+            - The malware or the commands executed after exploitation sends DNS queries to the C2 server.
+              - However, these queries are longer than default DNS queries and crafted for subdomain addresses.
+              - Unfortunately, these subdomain addresses are not actual addresses; they are encoded commands like: "encoded-commands.maliciousdomain.com"
+            - When this query is routed to the C2 server, the server sends the actual malicious commands to the host.
+              - Often missed and not detected by network perimeters.
+
+## Cleartext Protocol: FTP & HTTP/User-Agent Analysis
+
+- FTP is designed to transfer files with ease, so it focuses on simplicity rather than security.
+  - Helps analyst find issues on an unsecure env such as:
+    - MITM attacks
+    - Credential stealing and unauthorised access
+    - Phishing
+    - Malware planting
+    - Data exfiltration
+  - Instead of just following the stream and reading the cleartext data, analyst should create statistics and key results from the investigation process.
+
+- HTTP is a cleartext-based, request-response and client-server protocol
+  - Standard type of network activity to request/serve web pages, and by default, it is not blocked by any network perimeter.
+    - As a result of being unencrypted and the backbone of web traffic, HTTP is one of the must-to-know protocols in traffic analysis.
+- User Agent Analysis:
+  - "user-agent" field is one of the great resources for spotting anomalies in HTTP traffic.
+  - Never whitelist a user agent, even if it looks natural.
+  - User agent-based anomaly/threat detection/hunting is an additional data source to check and is useful when there is an obvious anomaly
+    - If you are unsure about a value, you can conduct a web search to validate your findings with the default and normal user-agent info <https://explore.whatismybrowser.com/useragents/explore/>
+
+## Encrypted Protocol Analysis: Decrypting HTTPS analysis
+
+- This is caused by using the Hypertext Transfer Protocol Secure (HTTPS) protocol for enhanced security against spoofing, sniffing and intercepting attacks
+  - HTTPS uses TLS protocol to encrypt communications, so it is impossible to decrypt the traffic and view the transferred data without having the encryption/decryption key pairs.
+    - Attackers and malicious websites also use HTTPS so its not completly safe.
+  - The packets will appear in different colours as the HTTP traffic is encrypted
+    - Protocol and info details (actual URL address and data returned from the server) will not be fully visible.
+  - Can take a look at the TLS protocol handshake processes:
+    - TLS protocol handshake process/Analysis:
+      1. First steps contain "Client Hello" and "Server Hello" messages.
+      2. Then Key pairs are automatically created (per session) when a connection is established with an SSL/TLS-enabled webpage
+         2. An encryption key log file is a text file that contains unique key pairs to decrypt the encrypted traffic session
+         2. Must be using a sutible Browser to save these values as a key log file.
+            2. To do so, you will need to set up an environment variable and create the SSLKEYLOGFILE, and the browser will dump the keys to this file as you browse the web
+            2. Otherwise, it is not possible to create/generate a suitable key log file to decrypt captured traffic.
+               2. You can use the "right-click" menu or "Edit --> Preferences --> Protocols --> TLS" menu to add/remove key log files
+      3. Since SSL/TLS key pairs are created per session at the connection time, it is important to dump the keys during the traffic capture.
+      4. If traffic details are visible after using the key log file, you may be presented with different data formats:
+         1. Frame
+         2. Decrypted TLS
+         3. Decompressed Header
+         4. Reassembled TCP
+         5. Reassembled SSL
