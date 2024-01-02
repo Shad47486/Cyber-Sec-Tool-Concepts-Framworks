@@ -70,3 +70,39 @@
       - [How Do I View Email Headers For A Message?](<https://mediatemple.zendesk.com/hc/en-us/articles/204644060-how-do-i-view-email-headers-for-a-message>)
       - [Understanding An Email Header](<https://mediatemple.zendesk.com/hc/en-us/articles/204643950-understanding-an-email-header>)
   - The email BODY contains text and/or HTML formatted text
+
+## What information Should we collect when analyzing sus or malicious emails?
+
+- Email Header info:
+  - Sender email address
+  - Sender IP address
+  - Reverse lookup of the sender IP address
+  - Email subject line
+  - Recipient email address (this information might be in the CC/BCC field)
+  - Reply-to email address (if any)
+  - Date/time
+
+- Email Body info:
+  - Any URL links
+    - If an URL shortener service was used, then we'll need to obtain the real URL link
+  - The name of the attachment
+  - The hash value of the attachment
+    - hash type MD5 or SHA256, preferably the latter
+
+## What tools can we use when analyzing sus or malicious emails?
+
+- Email HeaderTools:
+  - [Messageheader](<https://toolbox.googleapps.com/apps/messageheader/analyzeheader>) or [Message Header Analyzer](<https://mha.azurewebsites.net/>)
+    - Analyzes SMTP message headers, which help identify the root cause of delivery delays.
+      - Copy and paste the entire email header and run the analysis tool.
+    - You can detect misconfigured servers and mail-routing problems.
+  - [IPinfo.io](<https://ipinfo.io/>)
+    - you can pinpoint your users’ locations, customize their experiences, prevent fraud, ensure compliance, and so much more
+  - [URLScan.io](<https://urlscan.io/>)
+    - Free service to scan and analyse websites.
+    - When a URL is submitted to urlscan.io, an automated process will browse to the URL like a regular user and record the activity that this page navigation creates.
+      - This includes the domains and IPs contacted, the resources (JavaScript, CSS, etc) requested from those domains, as well as additional info about the page itself.
+      - Will take a screenshot of the page, record the DOM content, JavaScript global variables, cookies created by the page, and a myriad of other observations.
+        - If the site is targeting the users one of the more than 400 brands tracked by urlscan.io, it will be highlighted as potentially malicious in the scan results.
+  - [Talos Reputation Center](<https://talosintelligence.com/reputation>)
+    - Overall a good tool to deal with phishing
