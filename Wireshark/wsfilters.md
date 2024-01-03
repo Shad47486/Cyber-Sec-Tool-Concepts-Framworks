@@ -329,13 +329,12 @@
             - 530: No login, invalid password.
         - ftp.response.code == 530
           - Bruteforce signal: List failed login attempts.
-        - 
   - ftp.request.command
     - EX: ftp.request.command == "USER"
-    - USER: Username.
-    - PASS: Password.
-    - CWD: Current work directory.
-    - LIST: List.
+      - USER: Username.
+      - PASS: Password.
+      - CWD: Current work directory.
+      - LIST: List.
   - ftp.request.arg
     - EX: ftp.request.arg == "password"
   - (ftp.response.code == 530) and (ftp.response.arg contains "username")
@@ -392,12 +391,20 @@
   - http.user_agent
     - Global Search
   - Must Research outcomes for grabbing the low-hanging fruits:
-    - Different user agent information from the same host in a short time notice.
-    - Non-standard and custom user agent info.
-    - Subtle spelling differences. ("Mozilla" is not the same as  "Mozlilla" or "Mozlila")
-    - Audit tools info like Nmap, Nikto, Wfuzz and sqlmap in the user agent field.
-    - Payload data in the user agent field.
-      - EX: (http.user_agent contains "sqlmap") or (http.user_agent contains "Nmap") or (http.user_agent contains "Wfuzz") or (http.user_agent contains "Nikto")
+    - EX: (http.user_agent contains "sqlmap") or (http.user_agent contains "Nmap") or (http.user_agent contains "Wfuzz") or (http.user_agent contains "Nikto")
+    - Things To note:
+      - Subtle spelling differences. ("Mozilla" is not the same as  "Mozlilla" or "Mozlila")
+      - Audit tools info like Nmap, Nikto, Wfuzz and sqlmap in the user agent field.
+      - Payload data in the user agent field.
+
+- Common Filters for potential LOG4j:
+  - http.request.method == "POST"
+    - Attack from log4j typically start with a post
+  - (ip contains "jndi") or ( ip contains "Exploit")
+    - There are known cleartext patterns: "jndi:ldap" and "Exploit.class".
+  - (frame contains "jndi") or ( frame contains "Exploit")
+    - There are known cleartext patterns: "jndi:ldap" and "Exploit.class".
+  - (http.user_agent contains "$") or (http.user_agent contains "==")
 
 ### Encrypted Protocol Analysis: Decrypting HTTPS Analysis (Used with Display Filter Search Bar)
 

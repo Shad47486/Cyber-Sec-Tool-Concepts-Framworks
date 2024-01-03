@@ -19,6 +19,19 @@
     OR
   - lower right bottom of the status bar --> Profile
 
+***Wireshark Can also help you to create FIREWALL RULES READY TO IMPLEMENT WITH A COUPLE OF CLICKS.***
+
+- To do so go to: "Tools --> Firewall ACL Rules" menu
+  - Once you use this feature, it will open a new window and provide a combination of rules (IP, port and MAC address-based) for different purposes.
+    - Note that these rules are generated for implementation on an outside firewall interface.
+- Currently, Wireshark can create rules for:
+  - Netfilter (iptables)
+  - Cisco IOS (standard/extended)
+  - IP Filter (ipfilter)
+  - IPFirewall (ipfw)
+  - Packet filter (pf)
+  - Windows Firewall (netsh new/old format)
+
 ## When loading a .pcap file in wireshark, what are the 3 panes that are shown? What do they do?
 
 - Packet List Pane (Center of the screen where all packes can be seen):

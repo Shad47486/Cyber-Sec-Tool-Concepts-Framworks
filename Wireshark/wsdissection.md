@@ -151,10 +151,18 @@
   - Standard type of network activity to request/serve web pages, and by default, it is not blocked by any network perimeter.
     - As a result of being unencrypted and the backbone of web traffic, HTTP is one of the must-to-know protocols in traffic analysis.
 - User Agent Analysis:
+  - Must Research for outcomes
+    - Different user agent information from the same host in a short time notice.
+    - Non-standard and custom user agent info.
+    - Subtle spelling differences. ("Mozilla" is not the same as  "Mozlilla" or "Mozlila")
+    - Audit tools info like Nmap, Nikto, Wfuzz and sqlmap in the user agent field.
+    - Payload data in the user agent field.
+      - EX: (http.user_agent contains "sqlmap") or (http.user_agent contains "Nmap") or (http.user_agent contains "Wfuzz") or (http.user_agent contains "Nikto")
   - "user-agent" field is one of the great resources for spotting anomalies in HTTP traffic.
   - Never whitelist a user agent, even if it looks natural.
   - User agent-based anomaly/threat detection/hunting is an additional data source to check and is useful when there is an obvious anomaly
     - If you are unsure about a value, you can conduct a web search to validate your findings with the default and normal user-agent info <https://explore.whatismybrowser.com/useragents/explore/>
+
 
 ## Encrypted Protocol Analysis: Decrypting HTTPS analysis
 
