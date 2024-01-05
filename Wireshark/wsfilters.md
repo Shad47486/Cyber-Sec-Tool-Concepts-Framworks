@@ -423,14 +423,19 @@
     - TLS: Global TLS search
       - tls.handshake.type == 1
         - TLS Client Request
+          - "Client Hello"
       - tls.handshake.type == 2
         - TLS Server response
+          - "Server Hello"
   - ssdp
     - Local Simple Service Discovery Protocol (SSDP)
       - (http.request or tls.handshake.type == 1) and !(ssdp)
         - Client Hello
       - (http.request or tls.handshake.type == 2) and !(ssdp)
         - Server Hello
+  - http2
+    - Use this after using a keylog.txt file to decrypt the encryptedtraffic session
+      - Keylog.txt file contains unique key pairs to decrpyt the encrypted traffic session.
 
 #### Display Filter Expressions (Used with Display Filter Search Bar)
 

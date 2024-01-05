@@ -136,7 +136,7 @@
             - When this query is routed to the C2 server, the server sends the actual malicious commands to the host.
               - Often missed and not detected by network perimeters.
 
-## Cleartext Protocol: FTP & HTTP/User-Agent Analysis
+## Cleartext Protocol: FTP & HTTP/User-Agent Analysis & tips for cleartext credential entries
 
 - FTP is designed to transfer files with ease, so it focuses on simplicity rather than security.
   - Helps analyst find issues on an unsecure env such as:
@@ -162,6 +162,15 @@
   - Never whitelist a user agent, even if it looks natural.
   - User agent-based anomaly/threat detection/hunting is an additional data source to check and is useful when there is an obvious anomaly
     - If you are unsure about a value, you can conduct a web search to validate your findings with the default and normal user-agent info <https://explore.whatismybrowser.com/useragents/explore/>
+
+- Wireshark has such a feature to help analysts who want to hunt cleartext credential entries.
+  - Wireshark dissectors (FTP, HTTP, IMAP, pop and SMTP) are programmed to extract cleartext passwords from the capture file.
+    - You can view detected credentials using the "Tools --> Credentials" menu
+      - For Wireshark (v3.1 and later)
+    - Since the feature works only with particular protocols, it is suggested to have manual checks and not entirely rely on this feature to decide if there is a cleartext credential in the traffic.
+  - Once you use the feature, it will open a new window and provide detected credentials.
+    - It will show the packet number, protocol, username and additional information.
+  - This window is clickable; clicking on the packet number will select the packet containing the password, and clicking on the username will select the packet containing the username info.
 
 ## Encrypted Protocol Analysis: Decrypting HTTPS analysis
 

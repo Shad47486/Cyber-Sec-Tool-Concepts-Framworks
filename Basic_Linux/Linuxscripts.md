@@ -68,3 +68,7 @@
 ## search the "testvalue1: string everywhere, organise column spaces & view the output with less
 
 - grep -rin Testvalue1 * | column -t | less -S
+
+## Running the file command on all files in a dir and outputing results
+
+- file * | nl
