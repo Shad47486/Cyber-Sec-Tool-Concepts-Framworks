@@ -163,7 +163,6 @@
   - User agent-based anomaly/threat detection/hunting is an additional data source to check and is useful when there is an obvious anomaly
     - If you are unsure about a value, you can conduct a web search to validate your findings with the default and normal user-agent info <https://explore.whatismybrowser.com/useragents/explore/>
 
-
 ## Encrypted Protocol Analysis: Decrypting HTTPS analysis
 
 - This is caused by using the Hypertext Transfer Protocol Secure (HTTPS) protocol for enhanced security against spoofing, sniffing and intercepting attacks

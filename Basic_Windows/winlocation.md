@@ -1,5 +1,7 @@
 # Locations that are good to know about & what these files/folders/registries do
 
+- [Windows Folder/Registrys/Files Location Cheatsheet](./wincheetsheet.pdf)
+
 ## Good first step in windows forensics is to make to get System Info such as
 
 - OS Version:

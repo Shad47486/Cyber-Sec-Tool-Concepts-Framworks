@@ -117,3 +117,13 @@
   - In file tab
     - Important an analyst discover shared files & saves them for further investigation
       - Works for Protocols steams: DICOM, HTTP, IMF, SMB, TFTP
+
+## Helpful Links/Tips
+
+- [Display Filter Reference: Simple Mail Transfer Protocol](<https://www.wireshark.org/docs/dfref/s/smtp.html>)
+- [Display Filter Reference: Internet Message Format](<https://www.wireshark.org/docs/dfref/i/imf.html>)
+
+- The Internet Message Format is format in which text messages are transferred over the Internet.
+  - Where SMTP is equivalent to the message envelope, IMF is equivalent to the letter within the envelope.
+    - It contains the originator, recipients, subject and dates.
+    - Whilst IMF only handles text messages, it can be augmented with MIME_multipart to support multi-media messages
