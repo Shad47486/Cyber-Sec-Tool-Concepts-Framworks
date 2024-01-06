@@ -2,6 +2,12 @@
 
 - [Windows Folder/Registrys/Files Location Cheatsheet](./wincheetsheet.pdf)
 
+***IMPORTANT BELOW***
+
+- Hives are located in the C:\Windows\System32\Config directory and are
+
+***IMPORTANT ABOVE***
+
 ## Good first step in windows forensics is to make to get System Info such as
 
 - OS Version:
