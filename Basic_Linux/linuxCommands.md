@@ -114,6 +114,13 @@
   - Lets you edit a file using the linux text editor (getdit)
     - Can be useful when you need to go to multiple directorys and edit different files
 
+- exiftool (File)
+  - ExifTool is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
+  - Works on EXIF, GPS, IPTC, XMP, makernotes, and other metadata information in image, audio and video
+
+- binwalk
+  - Fast, easy to use tool for analyzing, reverse engineering, and extracting firmware images.
+
 ## parameters to add on besides pipes
 
 - a
