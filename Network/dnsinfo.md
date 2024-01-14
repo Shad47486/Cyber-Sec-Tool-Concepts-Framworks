@@ -55,7 +55,6 @@
     - TXT records have multiple uses, but some common ones can be to list servers that have the authority to send an email on behalf of the domain (this can help in the battle against spam and spoofed email).
       - They can also be used to verify ownership of the domain name when signing up for third party services.
 
-
 ## What happens when you make a DNS request?
 
 1. When you request a domain name, your computer first checks its local cache to see if you've previously looked up the address recently; if not, a request to your Recursive DNS Server will be made.
@@ -66,10 +65,14 @@
 
 3. The root servers act as the DNS backbone of the internet; their job is to redirect you to the correct Top Level Domain Server, depending on your request
    3. EX: You request <>, the root server will recognise the Top Level Domain of .com and refer you to the correct TLD server that deals with .com addresses.
-   3. 
 
+4. The TLD server holds records for where to find the authoritative server to answer the DNS request.
+   4. The authoritative server is often also known as the NS for the domain.
+      4. EX: The NS for example.com is kip.ns.cloudflare.com and uma.ns.cloudflare.com.
+         4. You'll often find multiple NS for a domain name to act as a backup in case one goes down.
 
-
-
-
-
+5. An authoritative DNS server is the server that is responsible for storing the DNS records for a particular domain name and where any updates to your domain name DNS records would be made.
+   5. Depending on the record type, the DNS record is then sent back to the Recursive DNS Server, where a local copy will be cached for future requests and then relayed back to the original client that made the request.
+      5. DNS records all come with a TTL (Time To Live) value.
+      5. This value is a number represented in seconds that the response should be saved for locally until you have to look it up again.
+      5. Caching saves on having to make a DNS request every time you communicate with a server.
