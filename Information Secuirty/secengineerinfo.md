@@ -19,7 +19,6 @@
   - Basic understanding of computer networks, operating systems, and programming.
   - Basic understanding of security concepts such as Governance, Risk and Compliance (GRC).
 
-
 ## Core Responsibilities of a Security Engineer
 
 - Asset Management/Asset Inventory
@@ -87,4 +86,3 @@
   **The top priority of the executive management is to maintain business continuity**
   - A security engineer might be involved in disaster recovery, business continuity, and crisis management planning as part of the different compliance frameworks and the organization's internal policies.
     - The role of a security engineer in these areas might differ depending on the organization.
-
