@@ -87,40 +87,40 @@
   - A security engineer might be involved in disaster recovery, business continuity, and crisis management planning as part of the different compliance frameworks and the organization's internal policies.
     - The role of a security engineer in these areas might differ depending on the organization.
 
-#### ﻿﻿Information Security Frameworks
+#### Information Security Frameworks
 
-* Provides a comprehensive set of documents that outline the org's approach to information security and governs how security is implemented, managed, & enforced within the org.
-  * This is includes:
-    * Policies:
-      * A formal statement that outlines an org's goals, principles, & guidelines for achieving specific objs.
-    * Standards:
-      * A document establishing specific requirements or specifications for a particular process, product, or service.
-    * Guidelines:
-      * A doc that provides recommendations and best practices (non-mandatory) for achieving specific goals or objs.
-    * Procedures:
-      *  Set of specific steps for undertaking a particular task or process.
-    *  Baselines:
-      *  A set of minimum security standards or requirements that an organisation or system must meet.
+- Provides a comprehensive set of documents that outline the org's approach to information security and governs how security is implemented, managed, & enforced within the org.
+  - This is includes:
+    - Policies:
+      - A formal statement that outlines an org's goals, principles, & guidelines for achieving specific objs.
+    - Standards:
+      - A document establishing specific requirements or specifications for a particular process, product, or service.
+    - Guidelines:
+      - A doc that provides recommendations and best practices (non-mandatory) for achieving specific goals or objs.
+    - Procedures:
+      - Set of specific steps for undertaking a particular task or process.
+    - Baselines:
+      - A set of minimum security standards or requirements that an organisation or system must meet.
 
-* Developing Governance Documents:
-  * Identify the scope and purpose:
-    * Determine what the doc will cover and why it is needed.
-    * EX: A password policy might be required to ensure robust and secure user passwords.
-      * In contrast, a baseline might be required to establish a minimum level of security for all systems.
-  * Research and review
-    * Research relevant laws, regulations, industry standards, & best practices to ensure your doc is comprehensive & up-to-date.
-    * Review existing policies, procedures, & other documents to avoid duplicating efforts or contradicting existing guidance.
-  * Draft the document
-    * Develop an outline and start drafting the doc, following best practices for writing clear and concise policies, procedures, standards, guidelines, & baselines.
-    * Ensure the doc is specific, actionable, and aligned with the org's goals and values.
-  * Review and approval
-    * Have the document reviewed by stakeholders, such as subject matter experts, legal and compliance teams, and senior management.
-    * Incorporate their feedback and ensure the document aligns with organisational goals and values. Obtain final approval from appropriate stakeholders.
-  * Implementation and communication
-    * Communicate the doc to all relevant employees & stakeholders, and ensure they understand their roles & responsibilities in implementing it.
-    * Develop training and awareness programs to ensure the document is understood and followed.
-  * Review and update
-    * Monitor compliance & adjust the doc based on feedback and changes in the threat landscape or regulatory environment.
+- Developing Governance Documents:
+  - Identify the scope and purpose:
+    - Determine what the doc will cover and why it is needed.
+    - EX: A password policy might be required to ensure robust and secure user passwords.
+      - In contrast, a baseline might be required to establish a minimum level of security for all systems.
+  - Research and review
+    - Research relevant laws, regulations, industry standards, & best practices to ensure your doc is comprehensive & up-to-date.
+    - Review existing policies, procedures, & other documents to avoid duplicating efforts or contradicting existing guidance.
+  - Draft the document
+    - Develop an outline and start drafting the doc, following best practices for writing clear and concise policies, procedures, standards, guidelines, & baselines.
+    - Ensure the doc is specific, actionable, and aligned with the org's goals and values.
+  - Review and approval
+    - Have the document reviewed by stakeholders, such as subject matter experts, legal and compliance teams, and senior management.
+    - Incorporate their feedback and ensure the document aligns with organisational goals and values. Obtain final approval from appropriate stakeholders.
+  - Implementation and communication
+    - Communicate the doc to all relevant employees & stakeholders, and ensure they understand their roles & responsibilities in implementing it.
+    - Develop training and awareness programs to ensure the document is understood and followed.
+  - Review and update
+    - Monitor compliance & adjust the doc based on feedback and changes in the threat landscape or regulatory environment.
 
 
 

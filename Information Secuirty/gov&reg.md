@@ -78,4 +78,3 @@
 
 - Competitive advantage:
   - Effective security governance and compliance with relevant regulations can provide a competitive advantage by demonstrating an organisation's commitment to protecting sensitive data and enhancing stakeholder trust.
-

@@ -25,16 +25,3 @@
 * Receive the audit report:
   * Once the audit is complete, the auditor will provide a report detailing the audit results.
     * The report may include a description of your controls, any deficiencies or gaps identified, & recommendations for improvement.
-
-
-
-
-
-
-
-
-
-
-
-
- 
