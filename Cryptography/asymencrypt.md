@@ -15,11 +15,6 @@
   * If Alice encrypts a message using Bob’s public key, it can be decrypted only using Bob’s private key.
   * Reversely, if Bob encrypts a message using his private key, it can only be decrypted using Bob’s public key.
 
-***Tools to Encrypt/Decrypt Keys***
-
-* [GNU Privacy Guard (GPG)](./Tools/gpg.md)
-* [OpenSSL Project](./Tools/openssl.md)
-
 ## We can achieve Confidentiality, Integrity, Authenticity, & Nonrepudiation, using asymmetric encryption
 
 * Confidentiality by encrypting the messages using the recipient’s public key
@@ -54,3 +49,31 @@
         * EX: Each being 1024 bits (that’s a # with more than 300 digits).
           * It is important to note that RSA relies on secure random # generation, as with other asymmetric encryption algorithms.
             * IF an adversary can guess p & q, the whole system would be considered insecure.
+
+* Diffie-Hellman Key Algorithim Exchange
+  * It allows the both parties to agree upon the exchange of secret over a public channel.
+    * However, the discussed key exchange is prone to a Man-in-the-Middle (MitM) attack.
+  * EX of steps:
+    1. Alice and Bob agree on q and g.
+       * For this to work, q should be a prime number, and g is a number smaller than q that satisfies certain conditions.
+         * In modular arithmetic, g is a generator.
+           * EX: q = 29 and g = 3.
+    2. Alice chooses a random number a smaller than q.
+       * She calculates A = (ga) mod q.
+       * The number a must be kept a secret
+         * However, A is sent to Bob.
+       * Let’s say that Alice picks the number a = 13 and calculates A = 313%29 = 19 and sends it to Bob.
+    3. Bob picks a random number b smaller than q.
+       * He calculates B = (gb) mod q. Bob must keep b a secret; however, he sends B to Alice.
+         * Let’s consider the case where Bob chooses the number b = 15 and calculates B = 315%29 = 26
+           * He proceeds to send it to Alice.
+    4. Alice receives B and calculates key = Ba mod q.
+       * Numeric example key = 2613 mod 29 = 10.
+    5. Bob receives A and calculates key = Ab mod q.
+       * Numeric example key = 1915 mod 29 = 10.
+    6. We can see that Alice and Bob reached the same key.
+
+***Tools to Encrypt/Decrypt Keys***
+
+* [GNU Privacy Guard (GPG)](./Tools/gpg.md)
+* [OpenSSL Project](./Tools/openssl.md)

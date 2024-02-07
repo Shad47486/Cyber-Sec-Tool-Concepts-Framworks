@@ -24,11 +24,6 @@
   * Authenticity:
     * Being able to decrypt the ciphertext using the secret key also proves the authenticity of the message because only both parties know the secret key.
 
-***Tools to Encrypt/Decrypt Keys***
-
-* [GNU Privacy Guard (GPG)](./Tools/gpg.md)
-* [OpenSSL Project](./Tools/openssl.md)
-
 ## What is the procces of using a symmetric key encryption algorithm?
 
 * The sender provides the encrypt process with the plaintext & the key to get the ciphertext.
@@ -39,7 +34,7 @@
 ### Different types of Symmetric keys algorithm?
 
 * Data Encryption Standard (DES):
-  * National Institute of Standard & Technology (NIST) published DES 1977.
+  * NIST published DES 1977.
     * Is a Block Chiper
     * DES is a symmetric encryption algorithm that uses a key size of 56 bits. In 1997, a challenge to break a message encrypted using DES was solved.
     * Consequently, it was demonstrated that it had become feasible to use a brute-force search to find the key & break a message encrypted using DES. In 1998, a DES key was broken in 56 hours.
@@ -81,3 +76,8 @@
 * CAMELLIA128, CAMELLIA192, and CAMELLIA25
   * Designed by Mitsubishi Electric and NTT in Japan. Its name is derived from the flower camellia japonica.
     * Is a Block Chiper
+
+***Tools to Encrypt/Decrypt Keys***
+
+* [GNU Privacy Guard (GPG)](./Tools/gpg.md)
+* [OpenSSL Project](./Tools/openssl.md)

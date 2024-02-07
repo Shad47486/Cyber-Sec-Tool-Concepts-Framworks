@@ -1,26 +1,30 @@
 # What is some general terminology & tips to know about cryptograpgy?
 
 * Cryptography’s role starts with checking the certificate. For a certificate to be considered valid, it means it is signed. Signing means that a hash of the certificate is encrypted with the private key of a trusted third party; the encrypted hash is appended to the certificate.
-*General Terminology Below*
+
+*General Terminology Below:*
+
 * Cryptographic Algorithm or Cipher:
   * This algorithm defines the encryption and decryption processes.
 
 * Key:
   * The cryptographic algorithm needs a key to convert the plaintext into ciphertext and vice versa.
 
-* plaintext is the original message that we want to encrypt
+* Plaintext:
+  * Original message that we want to encrypt
 
-* ciphertext is the message in its encrypted form
+* ciphertext:
+  * Message in its encrypted form
 
 ## DIfferent types of Encryptions
 
 * Symmetric Encryption
-  * AES 192 & 256, International Data Encryption Algorithm (IDEA), Triple DES (Data Encryption Standard), CAST5 (CAST-128), BLOWFISH, TWOFISH, CAMELLIA (128, 192 & 256)
-    * Can be encrypted/decrypted using GNU Privacy Guard (GPG) or OpenSSL
+  * AES 192 & 256 (Modern Use), International Data Encryption Algorithm (IDEA), Triple DES (Data Encryption Standard), CAST5 (CAST-128), BLOWFISH, TWOFISH, CAMELLIA (128, 192 & 256)
 
 * Asymmetric Encryption
   * Diffie-Hellman Key Exchange, RSA, etc.
-    * Can be encrypted/decrypted using OpenSSL
+
+* Both an be encrypted/decrypted using GNU Privacy Guard (GPG) or OpenSSL
 
 ### What is Hashing?
 
@@ -40,7 +44,9 @@
   * Older Algorithms:
     * MD5 (Message Digest 5)
     * SHA-1
+
 **Hash-based message authentication code (HMAC):**
+
 * Msg authentication code (MAC) that uses a cryptographic key in addition to a hash function.
   * NEEDS:
     * secret key
@@ -55,30 +61,13 @@
   5. Using XOR, calculate key ⊕ opad.
   6. Append the hash function output from step 4 to the XOR output from step 5.
   7. Apply the hash function to the resulting stream of bytes (in step 6) to get the HMAC.
-     * To calculate the HMAC on a Linux system, you can use any of the available tools such as hmac256 (or sha224hmac, sha256hmac, sha384hmac, and sha512hmac, where the secret key is added after the option --key) 
 
+*To calculate the HMAC on a LINUX OS, you can use any of the available tools such as:*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* hmac256, sha224hmac, sha256hmac, sha384hmac, and sha512hmac,
+  * Where the secret key is added after the option --key
+  * EX:
+    * hmac256 s!Kr37 message.txt
+    * hmac256 1234 message.txt
+    * sha256hmac message.txt --key s!Kr37
+    * sha256hmac message.txt --key 1234
