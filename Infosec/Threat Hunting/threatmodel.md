@@ -45,6 +45,3 @@
 6. Monitor & Evaluate
    * Continuously test & monitor the effectiveness of the implemented countermeasures & evaluate the success of the threat modelling exercise. 
      * EX: of a simple measurement of success is tracking the identified risks that have been effectively mitigated or eliminated.
-
-
-

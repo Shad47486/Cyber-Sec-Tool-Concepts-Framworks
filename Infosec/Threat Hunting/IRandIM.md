@@ -90,8 +90,14 @@
 
 * Insufficient Determination of Incident Scope
   * A big mistake that often happens during incident response and management is not understanding the incident scope.
-    * 
+    * It is often impossible to fully understand the incident scope, best efforts should be made.
+  * Insufficient Accountability
+    * It is incredibly important to understand that there is a difference between discussing containment, eradication, and recovery actions and performing them
 
 * Insufficient Backups
-
-
+  * In the event that an incident results in disruptive actions such as ransomware being deployed, the only saving grace is backups that can be used to recover the estate.
+    * However, if backup processes and policies were not clearly established and followed, it would not be possible to recover from the incident.
+      * Furthermore, sometimes backups are not sufficiently isolated.
+        * In modern times where the primary focus is on availability, often legacy backups are removed in favour of new HA & DR environments.
+          * H/O the issue is that if ransomware executes on the main system, it is replicated as such in the DR environment.
+          * Therefore, offline and remote backups are just as important today.
