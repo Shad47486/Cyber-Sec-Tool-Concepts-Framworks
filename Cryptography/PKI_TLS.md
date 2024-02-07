@@ -21,7 +21,7 @@
 
 * You can use openssl to generate a cert signing request using the command:
   * EX: openssl req -new -nodes -newkey rsa:4096 -keyout key.pem -out cert.csr
-    * [More info on command](./Tools/openssl.md)
+    * [More info on OpenSSL commands](./Tools/openssl.md)
 
 * Once the CSR file is ready, you can send it to a CA of your choice to get it signed & ready to use on your server.
   * Once the client, i.e., the browser, receives a signed cert it trusts, the SSL/TLS handshake takes place. The purpose would be to agree on the ciphers & the secret key.

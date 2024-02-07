@@ -30,8 +30,9 @@
   * We set the private key as input using -in private-key.pem and saved the output using -out public-key.pem.
     * EX: openssl rsa -in private-key.pem -pubout -out public-key.pem
 
-* We are curious to see real RSA variables, so we used -text -noout.
-  * The values of p, q, N, e, and d are prime1, prime2, modulus, publicExponent, and privateExponent, respectively.
+* IF WE ARE CURIUS TO SEE THE REAL RSA VARS, we use -text & -noout.
+  * Values p, q, N, e, and d = prime1(aka p), prime2(aka q), modulus (aka N), publicExponent(aka e), & privateExponent(aka d).
+    * EX: openssl rsa -in private-key.pem -text -noout
 
 * If we already have the recipient’s public key, we can encrypt it with the command:
   * EX: openssl pkeyutl -encrypt -in plaintext.txt -out ciphertext -inkey public-key.pem -pubin

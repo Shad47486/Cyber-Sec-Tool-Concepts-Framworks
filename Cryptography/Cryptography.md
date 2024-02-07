@@ -35,7 +35,7 @@
         * Knowing that a hexadecimal digit represents 4 bits, the 256 bits checksum can be represented as 64 hexadecimal digits.
           * It is worth stressing that the length of the resulting message digest or checksum is the same, no matter how small or big the file is.
 
-* What can this help with?
+* What can Hashing functions help with?
   * Storing passwords & Detecting modifications
 
 * What are the different hashing algorithms?
@@ -48,10 +48,10 @@
 **Hash-based message authentication code (HMAC):**
 
 * Msg authentication code (MAC) that uses a cryptographic key in addition to a hash function.
-  * NEEDS:
-    * secret key
-    * inner pad (ipad) a constant string. (RFC2104 uses the byte 0x36 repeated B times. The value of B depends on the chosen hash function.)
-    * outer pad (opad) a constant string. (RFC2104 uses the byte 0x5C repeated B times.)
+  * HMACs NEED:
+    * A secret key
+    * A inner pad (ipad) a constant string. (RFC2104 uses the byte 0x36 repeated B times. The value of B depends on the chosen hash function.)
+    * A outer pad (opad) a constant string. (RFC2104 uses the byte 0x5C repeated B times.)
 
 * Calculating the HMAC follows the following steps as shown in the figure:
   1. Append zeroes to the key to make it of length B, i.e., to make its length match that of the ipad.
@@ -71,3 +71,24 @@
     * hmac256 1234 message.txt
     * sha256hmac message.txt --key s!Kr37
     * sha256hmac message.txt --key 1234
+
+**How van we safeguard passwords as they are saved in a dB (Data in rest) using hashes?**
+
+* The least secure method would be to save the username and the password in a database.
+  * This way, any data breach would expose the users’ passwords.
+  * No effort is required beyond reading the database containing the passwords.
+
+*The improved approach would be to save the username and a hashed version of the password in a database.*
+
+* This way, a data breach will expose the hashed versions of the passwords.
+
+* Since a hash function is irreversible, the attacker needs to keep trying different passwords to find the one that would result in the same hash
+  * However this is prone to rainbow table attacks
+    * A rainbow table contains a list of passwords along with their hash value.
+      * Hence, the attacker only needs to look up the hash to recover the password
+      * EX: It would be easy to look up d8578edf8458ce06fbc5bb76a58c5ca4 to discover the original password of alice.
+        * Consequently, we need to find more secure approaches to save passwords securely; we can add salt.
+          * A "salt" is a random value we can append to the password before hashing it.
+        * 2 EXs of how to add salt to passwords:
+          * hash(password + salt) OR hash(hash(password) + salt)
+          * [More info on password storage](<https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html>)

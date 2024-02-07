@@ -1,23 +1,23 @@
-# This is a repo that contains codes, scripts, installion guides for different sec tools learned from TRYHACKME
+# This is a repo that contains codes, scripts, installion guides for different sec tools learned from personal studies
 
-## Basic Linux Commands:
+## Basic Linux Commands
 
 - [Info on linux Commands](.//Basic_Linux_Commands/linuxsys.md)
 
-# Brim:
+# Brim
 
 - [Info on Brim](.//Brim/briminfo.md)
 
 
-## Enum4linux:
+## Enum4linux
 
 - [Info on Enum4linux](.//Enum4linux/E4linfo.md)
 
-## Gobuster:
+## Gobuster
 
 - [Info on Gobuster](.//Gobuster/busterinfo.md)
 
-## Hashcat:
+## Hashcat
 
 - [Info on Hashcat](.//Hashcat/hcinfo.md)
 
@@ -25,54 +25,53 @@
 
 - [Info on Hydra](.//)
 
-## Impacket:
+## Impacket
 
 - [Info on Impacket](.//)
 
-## Kerbrute:
+## Kerbrute
 
 - [Info on Kerbrute](.//Kerbrute/kerbruteinfo.md)
 
-## Metasploit:
-
+## Metasploit
 - [Info on Metasploit](.//Metasploit/metainfo.md)
 
-## Mimikatz:
+## Mimikatz
 
 - [Info on Mimikatz](.//Mimikatz/miminfo.md)
 
-## Nmap:
+## Nmap
 
 - [Info on WazuNmaph](.//Nmap/nmapinfo.md)
 
-## Protocol:
+## Protocol
 
 - [Info on Protocol](.//Protocols/Ports.md)
 
-## Rubeues:
+## Rubeues
 
 - [Info on Rubeues](.//Rubeues/rebinfo.md)
 
-## Snort:
+## Snort
 
 - [Info on Snort](.//Snort/snortinfo.md)
 
-## Sysmon:
+## Sysmon
 
 - [Info on Sysmon](.//Sysmon/Sysmoninfo.md)
 
-## Volatility:
+## Volatility
 
 - [Info on Volatility](.//Volatility/volinfo.md)
 
-## Wazuh:
+## Wazuh
 
 - [Info on Wazuh](.//Wazuh/wazuhinfo.md)
 
-## Zeek:
+## Zeek
 
 - [Info on Zeek](.//Zeek/zeekinfo.md)
 
-## ZimmermanTools:
+## ZimmermanTools
 
 - [Info on Zimerman tools](.//Zimmermantool/toolsinstall.md)
