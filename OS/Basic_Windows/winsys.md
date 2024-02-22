@@ -100,3 +100,13 @@
   - MFTECmd parses data from the different files created by the NTFS file system like $MFT, $Boot, etc
     - Command to parsing using tool:
       - MFTECmd.exe -f <path-to-$MFT-file> --csv <path-to-save-results-in-csv>
+
+### System Configuration Utility (msconfig)
+
+- Advanced troubleshooting, & its main purpose is to help diagnoise sta2rtup issues.
+  - NEED LOCAL ADMIN RIGHTS
+
+- Utility has five tabs across the top
+  - General, Boot, Services, Startup, Tools
+
+
