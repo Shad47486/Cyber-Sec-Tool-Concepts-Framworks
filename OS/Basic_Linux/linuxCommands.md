@@ -1,4 +1,9 @@
-# List of useful commands to use for linux to mannuver thru linux CMDS
+# General info
+
+- Process can be in considered a background OR a foreground process
+  - 
+
+## List of useful commands to use for linux to mannuver thru linux CMDS
 
 - ls
   - Shows what is currently in the dir/folder
@@ -30,7 +35,12 @@
   - Pings a ip address/cidr to see if communication to the internet is there
 
 - nano [file]
-  - Open doc
+  - Simple txt opener
+    - Close & Save
+      - ctr +  x
+
+- vim [file]
+  - Advanced txt opener
 
 - cat [file]
   - Concatenate
@@ -87,18 +97,25 @@
         - -R means recursivly
 
 - ps
+  - Viewing different processes occuring
+    - To see process run by other users & those that don't run from a session:
+      - ps aux
 
-- kill
+- kill [process ID/#]
+  - Kills processes
+    - Signals that we can send to a procdess when it is killed:
+      - SIGTERM
+        - Kills the process, BUT allows it to do some cleanup tasks beforehand
+      - SIGKILL
+        - Kill the process - DOESNT DO ANY CLEANUP AFTER THE FACT
+      - SIGSTOP
+        - Stops/Suspends a process
 
 - file [file]
   - Gives minor information about file
 
 - strings [filename/path]
   - Lists down the strings present in a file
-
-- ssh user@ip
-  - Allows us to remotely execute commands on another device remotely.
-    - Any data sent between the devices is encyrpoted when it is sent over a network such as the internet
 
 - histroy
   - Provides history of commands ran
@@ -121,11 +138,33 @@
 - binwalk
   - Fast, easy to use tool for analyzing, reverse engineering, and extracting firmware images.
 
-## parameters to add on besides pipes
+- wget [URL] or [IP-address]
+  - Download files from the web VIA HTTP (As if you were acessing the filew in ur browser)
 
-- a
-  - Short for all
-    - ls -a
+- systemctl [option] [service]
+  - Allows us to interact with the systemd process/daemon.
+    - 4 options: start, stop, enable, & disable
+
+- fg
+  - brings us back to focus on different processes.
+
+## Transferring Files From Your Host - Secure Copy Protocol (SCP - SSH)
+
+- ssh user@ip
+  - Allows us to remotely execute commands on another device remotely.
+    - Any data sent between the devices is encyrpoted when it is sent over a network such as the internet
+
+- scp [File Name] [user@0.0.0.0:home/ubuntu/transferred.txt]
+  - Allows you to transfer files between two computers using the SSH protocol to provide both authentication and encryption.
+    - SOURCE AND DESTINATION FORMAT
+      - Starts with file name on local system [File Name] and then user of remote system followed by the remote ip & the files new name on our system [user@0.0.0.0:home/ubuntu/transferred.txt]
+
+## Serving Files From Your Host - WEB
+
+- python3 -m [http.server]
+  - Python3's "HTTPServer" will serve the files in the directory where you run the command
+    - Native feature in UBUNTU
+  - This module turns your computer into a quick and easy web server that you can use to serve your own files, where they can then be downloaded by another computing using commands such as curland wget
 
 ## File hash commands
 
