@@ -23,39 +23,24 @@
 * Risk Assessment (Planning):
   * During the early stages of SDLC, it is essential to identify security considerations that promote a security by design approach when functional requirements are gathered in the planning & requirements stages.
     * EX: If a user requests a blog entry from a site, the user should not be able to edit the blog or remove unnecessary input fields.
+  * [Risk Assessment](./riskasses.md)
 
 * Threat Modelling (Design & Prototype):
   * Is the process of identifying potential threats when there is a lack of appropriate safeguards.
     * It is very effective when following a risk assessment & during the design stage of the SDLC, as Threat Modelling focuses on what should not happen.
     * In contrast, design requirements state how the software will behave & interact.
       * EX: Ensure there is verification when a user requests account info.
+  * [Threat Modeling](./Threat_hunting/threatmodel.md)
 
 * Code Scanning/Review (Testing):
   * Code reviews can be either manual or automated.
   * Code Scanning or automated code reviews can leverage Static & Dynamic Security testing technologies.
     * These are crucial in the Development stages as code is being written.
+  * [Code Reviews/tools](./Threat_hunting/code_tests.md)
 
 * Security Assessments (Ops & Maintenance):
   * Like Pentests & Vulnerability Assessments are a form of automated testing that can identify critical paths of an app that may lead to exploitation of a vulnerability.
     * However, these are hypothetical as the assessment doesn't carry simulations of those attacks.
   * Pentesting, on the other hand, identifies these flaws and attempts to exploit them to demonstrate validity.
     * Pentests and Vulnerability Assessments are carried out during the Operations & Maintenance phase of the SDLC after a prototype of the app.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  * [SECURITY ASSESSMENT](./secassess.md)

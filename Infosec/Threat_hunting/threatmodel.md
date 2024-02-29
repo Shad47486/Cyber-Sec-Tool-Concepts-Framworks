@@ -43,5 +43,13 @@
    * Design & implement security controls to address the identified risks, such as implementing access controls, applying system updates, & performing regular vulnerability assessments.
 
 6. Monitor & Evaluate
-   * Continuously test & monitor the effectiveness of the implemented countermeasures & evaluate the success of the threat modelling exercise. 
+   * Continuously test & monitor the effectiveness of the implemented countermeasures & evaluate the success of the threat modelling exercise.
      * EX: of a simple measurement of success is tracking the identified risks that have been effectively mitigated or eliminated.
+
+### Various types of models
+
+* There are various methods to perform threat modelling.
+  * Not all the methods have the same purpose; some focus on risk or privacy concerns, while some are more customer-focused
+    * [Spoofing, Tampering, Repudiation, Information Disclosure, Denial Of Service, and Elevation/Escalation of Privilege (STRIDE)](/Infosec/Frameworks/STRIDE.md)
+    * [Damage Potential, Reproducibility, Exploitability, Affected Users and Discoverability (DREAD)](/Infosec/Frameworks/DREAD.md)
+    * [Process for Attack Simulation and Threat Analysis(PASTA)](/Infosec/Frameworks/PASTA.md)
