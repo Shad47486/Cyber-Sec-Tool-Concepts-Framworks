@@ -50,7 +50,7 @@
     - USRCLASS.DAT (mounted on HKEY_CURRENT_USER\Software\CLASSES)
       - Located: C:\Users\<username>\AppData\Local\Microsoft\Windows
         - *** BOTH NTUSER.DAT & USRCLASS.DAT ARE HIDDENT FILES**
-  - AmCache hive: 
+  - AmCache hive:
     - Windows creates this hive to save information on programs that were recently run on the system.
       - Located in C:\Windows\AppCompat\Programs\Amcache.hve
 
@@ -80,7 +80,7 @@
 
 ### Master File Table for New Technology File System (NTFS) File System
 
-- $MFT 
+- $MFT
   - The $MFT is the first record in the volume.
     - The Volume Boot Record (VBR) points to the cluster where it is located.
   - $MFT stores information about the clusters where all other objects present on the volume are located.
@@ -108,5 +108,3 @@
 
 - Utility has five tabs across the top
   - General, Boot, Services, Startup, Tools
-
-

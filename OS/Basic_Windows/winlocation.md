@@ -60,7 +60,8 @@
 - SAM hive and user information:
   - Contains user account information, login information, and group information.
     - Locations: SAM\Domains\Account\Users
-      - Indepth info: includes the relative identifier (RID) of the user, number of times the user logged in, last login time, last failed login, last password change, password expiry, password policy and password hint, and any groups that the user is a part of.
+      - Indepth info:
+        - includes the relative identifier (RID) of the user, number of times the user logged in, last login time, last failed login, last password change, password expiry, password policy and password hint, and any groups that the user is a part of.
 
 ## Next Steps are to look at the usage of files/folders
 
