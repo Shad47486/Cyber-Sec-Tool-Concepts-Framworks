@@ -47,7 +47,6 @@
   2. Recursively refresh this directory (sync its listing from the client)
   3. Recursively download this directory from the client
 
-
 ## What is Artifacts (or VQL Modules)?
 
 - Velociraptor allows packaging VQL queries inside mini-programs called Artifacts.

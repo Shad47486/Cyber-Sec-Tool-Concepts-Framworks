@@ -61,5 +61,3 @@
   - Exe may have sections named after certain packers such as UPX.
     - We can verify that this was packed using UPX via tools such as PEID, or by manually comparing the executables sections and filesize differences.
       - Take look at the entry points at (common names for packers is UPX)
-
-

@@ -24,20 +24,3 @@
 
 * crontab -e
   * Allows you to edit crontabs by selecting an editito (nano or vim) to edit ur crontab
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
