@@ -1,5 +1,10 @@
 # How to harden Windows?
 
+* Identity & Access Management (IAM)
+* Network Management
+* Application Management
+* Storage Management
+
 ## Identity & Access Management (IAM)
 
 * 2 types of windows accounts:
