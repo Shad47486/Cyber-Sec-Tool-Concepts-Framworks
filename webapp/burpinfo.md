@@ -9,6 +9,3 @@
 * Comes in Community (free) Edition, Professional (Unrestricted Version of Community) edition, & Enterprise (Continous scanning) Edition.
   * Burp Suite Enterprise continous scanning is similar to how tools like Nessus perform automated infrastructure scanning
   * Burp Suite Enterprise resides on a server and constantly scans the target web applications for potential vulnerabilities.
-
-
-
