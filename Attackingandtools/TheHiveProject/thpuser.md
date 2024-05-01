@@ -19,7 +19,6 @@
 - Read-only:
   - Can only read, Cases, Tasks and Observables details
 
-
 ## Permissions
 
 - manageOrganisation (1)

@@ -1,4 +1,7 @@
-# Metasploit is a widely used exploitation framework Can support all phases of a penetration testing engagement, from information gathering to post-exploitation. Allow information gathering, scanning, exploitation, exploit development, post-exploitation, and more
+# What is Metasploit?
+
+- It is a widely used exploitation framework Can support all phases of a penetration testing engagement, from info gathering to post-exploitation.
+- Allow information gathering, scanning, exploitation, exploit development, post-exploitation, and more
 
 ## Different Modules
 
