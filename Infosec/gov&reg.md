@@ -78,3 +78,23 @@
 
 - Competitive advantage:
   - Effective security governance and compliance with relevant regulations can provide a competitive advantage by demonstrating an organisation's commitment to protecting sensitive data and enhancing stakeholder trust.
+
+#### Types of Audits
+
+- Includes topics like scope, program, plan, criteria, evidence, objectives, team members, and responsibilities, in that way can have the findings and a final conclusion.
+
+- First-Party Audits(internal audits):
+  - Typically performed inside a company to measure the strengths & weaknesses relative to its internal business objectives
+
+- Second-Party Audits (External audits):
+  - Performed at the request of a customer (or a company contracted to act on the customer’s behalf) on a supplier of products or services.
+
+- Third-Party Audits (certification audit):
+  - An organization typically undertakes a third-party audit when it wants to achieve the audits certification (ISO, HIPAA, HITRUST, ETC). During the certification audit, a certification body auditor assesses whether an enterprise complies with the appropriate audit standard.
+
+- 2 kinds of audit methods:
+  - Onsite Audit:
+    - This is face-to-face; the auditor goes to the physical site and checks all the documentation.
+  - Remote Audit:
+    - This is done from a distance, using the internet as a tool to achieve the audit objectives.
+      - This one can apply to first and second parties’ audits.

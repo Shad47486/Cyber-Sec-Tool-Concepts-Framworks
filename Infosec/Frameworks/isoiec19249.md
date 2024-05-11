@@ -1,39 +1,45 @@
 # What is International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC)?
 
-*List of 5 Architectural Principles:*
+* Audits of ISO standards are conducted using a special standard called ISO 19011, which details how to carry it out and provides different language related to the world of audits.
+* Only ISO27001 ONLY 27001 can be audited within the ISO framwork.
+  * Focuysed on the assessment and acceptance level (appetite) of risks.
+
+* ISO 28000 talks about supply chain security.
+
+## List of 5 Architectural Principles:*
 
 1. Domain Separation:
    1. Every set of related components is grouped as a single entity; components can be applications, data, or other resources.
       1. Each entity will have its own domain and be assigned a common set of security attributes.
-      1. EX: consider the x86 processor privilege levels: the operating system kernel can run in ring 0 (the most privileged level).
-      1. In contrast, user-mode applications can run in ring 3 (the least privileged level)
+      2. EX: consider the x86 processor privilege levels: the operating system kernel can run in ring 0 (the most privileged level).
+      3. In contrast, user-mode applications can run in ring 3 (the least privileged level)
          1. Domain separation is included in the Goguen-Meseguer Model.
 
 2. Layering:
-   2. When a system is structured into many abstract levels or layers, it becomes possible to impose security policies at different levels; moreover, it would be feasible to validate the operation.
+   1. When a system is structured into many abstract levels or layers, it becomes possible to impose security policies at different levels; moreover, it would be feasible to validate the operation.
    2. Let’s consider the OSI model with its seven layers in networking.
-      2. Each layer in the OSI model provides specific services to the layer above it.
-         2. This layering makes it possible to impose security policies and easily validate that the system is working as intended.
+      1. Each layer in the OSI model provides specific services to the layer above it.
+         1. This layering makes it possible to impose security policies and easily validate that the system is working as intended.
       2. Another example from the programming world is disk operations; a programmer usually uses the disk read and write functions provided by the chosen high-level programming language.
-         2. The programming language hides the low-level system calls and presents them as more user-friendly methods. Layering relates to Defence in Depth.
+         1. The programming language hides the low-level system calls and presents them as more user-friendly methods. Layering relates to Defence in Depth.
 
 3. Encapsulation:
-   3. In object-oriented programming (OOP), we hide low-level implementations and prevent direct manipulation of the data in an object by providing specific methods for that purpose.
-      3. EX: If you have a clock object, you would provide a method increment() instead of giving the user direct access to the seconds variable.
-         3. The aim is to prevent invalid values for your variables. Similarly, in larger systems, you would use (or even design) a proper Application Programming Interface (API) that your application would use to access the database.
+   1. In object-oriented programming (OOP), we hide low-level implementations and prevent direct manipulation of the data in an object by providing specific methods for that purpose.
+      1. EX: If you have a clock object, you would provide a method increment() instead of giving the user direct access to the seconds variable.
+         1. The aim is to prevent invalid values for your variables. Similarly, in larger systems, you would use (or even design) a proper Application Programming Interface (API) that your application would use to access the database.
 
 4. Redundancy:
-   4. This principle ensures availability and integrity.
-      4. EXs:
-         4. Consider the case of a hardware server with two built-in power supplies: if one power supply fails, the system continues to function.
-         4. Consider a RAID 5 configuration with three drives: if one drive fails, data remains available using the remaining two drives
-            4. Moreover, if data is improperly changed on one of the disks, it would be detected via the parity, ensuring the data’s integrity.
+   1. This principle ensures availability and integrity.
+      1. EXs:
+         1. Consider the case of a hardware server with two built-in power supplies: if one power supply fails, the system continues to function.
+         2. Consider a RAID 5 configuration with three drives: if one drive fails, data remains available using the remaining two drives
+            1. Moreover, if data is improperly changed on one of the disks, it would be detected via the parity, ensuring the data’s integrity.
 
 5. Virtualization:
-   5. The concept of virtualization is sharing a single set of hardware among multiple operating systems.
-   5. Virtualization provides sandboxing capabilities that improve security boundaries, secure detonation, and observance of malicious programs.
+   1. The concept of virtualization is sharing a single set of hardware among multiple operating systems.
+   2. Virtualization provides sandboxing capabilities that improve security boundaries, secure detonation, and observance of malicious programs.
 
-**List of 5 Design Principles:**
+### List of 5 Design Principles
 
 1. Least Privilege:
    1. You can also phrase it informally as “need-to basis” or “need-to-know basis” as you answer the question, “who can access what?”
@@ -62,3 +68,5 @@
       5. This principle teaches that the systems should be designed to fail safe.
          5. EX: If a firewall crashes, it should block all traffic instead of allowing all traffic.
             5. Moreover, we should be careful that error messages don’t leak information that we consider confidential, such as dumping memory content that contains information related to other customers.
+
+#### What 
