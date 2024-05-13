@@ -35,7 +35,7 @@
   - EX: index=botsv1 sourcetype=stream:http dest_ip="192.168.250.70" *.exe
     - For furhter investigation of files make sure to look at if the files was excuted on the server using event ID #'s:
       - EX: index=botsv1 "example.exe" sourcetype="XmlWinEventLog" EventCode=1
-        - Event Code 1 is the code for processes creation 
+        - Event Code 1 is the code for processes creation
           - More info on sysmon process ID <https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon>
           - Good for finding any events from the installation phase
 
