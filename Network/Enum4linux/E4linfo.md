@@ -11,4 +11,3 @@
   - Riding on null sessions
 
 ## If youve managaed to obtain credentianls of usernames and passwords what Commands can u use?
-
