@@ -6,4 +6,3 @@ wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_
     - Rename the File to kerbrute to make it easier to call too & also make it exe (Chmod)
 
 ## ALSO MAKE SURE TO ADD THE TARGETED DNS DOMAIN NAME withe the machines IP to root/etc/hosts inside UR MACHINE or UR ATTACKER MACHINE
-

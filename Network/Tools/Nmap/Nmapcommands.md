@@ -14,4 +14,4 @@
 -oN: Parameter normal output to the file normal.file
 
 Basic string for enumeration of an ip using nmap:
-    - nmap -sV -sC -v -oN short [ip]
+    - nmap -sV -sC -v [ip]
