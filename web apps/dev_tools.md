@@ -10,7 +10,7 @@
   * We can also edit and interact with the page elements, which is helpful for web developers to debug issues.
     * This tool helps bc is the page source doesn't always represent what's shown on a webpage; this is because CSS, JavaScript & user interaction can change the content and style of the page, which means we need a way to view what's been displayed in the browser window at this exact time.
 
-## Debuggers
+### Debuggers
 
 * Intended for debugging JavaScript & for web deve wanting to work out why something might not be working.
   * H/O as penetration testers, it gives us the option of digging deep into the JavaScript code.
@@ -21,7 +21,7 @@
 * Can also utilise another feature of debugger called breakpoints
   * These are points in the code that we can force the browser to stop processing the JavaScript and pause the current exe.
 
-## Network
+### Network
 
 * Can be used to keep track of every external request a webpage makes.
   * If you click on the Network tab and then refresh the page, you'll see all the files the page is requesting.
