@@ -36,7 +36,28 @@
     - **SOMETHING TO NOTE ABOUT THE CYBER KC is that we don't need to follow the sequence of the cyber kill chain during the Investigation bc One finding in one phase will lead to another finding that may have mapped into some other phase. ***
       - Good to use OSINT tool when needed
 
-## Log Sources for investigations that could be helpful
+## Search & Reporting App Overview
+
+- Search & Reporting App is the default interface used to search and analyze the data on the Splunk Home page.
+  1. Search Head:
+     - Search Head is where we use search processing language queries to look for the data.
+  2. Time Duration:
+     - This tab option provides multiple options to select the time duration for the search.
+       - All-time will display the events in real-time.
+       - Similarly, the last 60 minutes will display all the events captured in the last hour.
+  3. Search History:
+     - This tab saves the search queries that the user has run in the past along with the time when it was run.
+       - It lets the user click on the past searches and look at the result.
+         - The filter option is used to search for the particular query based on the term.
+  4. Data Summary:
+     - This tab provides a summary of the data type, the data source, and the hosts that generated the events as shown below.
+       - This tab is very important feature used to get a brief idea about the network visibility.
+  5. Field Sidebar:
+     - The Field Sidebar can be found on the left panel of Splunk search.
+        - This sidebar has two sections showing selected fields and interesting fields.
+          - Also provides quick results, such as top values and raw values against each field.
+
+### Log Sources for investigations that could be helpful
 
 - wineventlog
   - Contains Windows Event logs
