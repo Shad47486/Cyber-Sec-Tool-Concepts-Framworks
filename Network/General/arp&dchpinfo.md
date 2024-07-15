@@ -3,7 +3,7 @@
 - ARP is Technology that is responsible for allowing devices to identify themselves on a network.
   - Allows a device to associate its MAC address with an IP address on the network.
     - Each device on a network will keep a log of the MAC addresses associated with other devices.
-  - When devices wish to communicate with another, they will send a broadcast to the entire network searching for the specific device.
+  - Sending a frame to the broadcast address on the network segment and asking the computer with a specific IP address to respond by providing its MAC (hardware) address.
     - Devices can use the ARP protocol to find the MAC address (and therefore the physical identifier) of a device for communication.
 
 - Each device within a network has a ledger to store information on, which is called a cache.

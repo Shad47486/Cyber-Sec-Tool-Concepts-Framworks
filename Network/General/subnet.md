@@ -28,3 +28,5 @@
     - EX: Any data that needs to go to a device that isn't on the same network (i.e. isn't on 192.168.1.0) will be sent to this device.
       - These devices can use any host address but usually use either the first or last host address in a network (.1 or .254)
         - 192.168.1.254
+
+- Subnets
