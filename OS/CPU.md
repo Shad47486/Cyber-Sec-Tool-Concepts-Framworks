@@ -19,4 +19,3 @@
       * Input/Output Devices:
         * All other devices that interact with a computer
           * Which includes Keyboards, Mice, Displays, Printers, Mass storage devices like Hard Disks and USBs, etc.
-
