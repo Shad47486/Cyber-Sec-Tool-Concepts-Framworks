@@ -116,5 +116,3 @@
 
 * EX: Conditional values can be seen in the extract [here](/Network/Tools/Sigma/yml_scripts/Remote_File_Copy.yml) from the Remote File Copy rule,  where the detection seeks to look for either of the tools: scp, rsync or sftp and with either filter values @ or :
   * EX2: Showcase a combination of the conditional expressions can be seen [here](/Network/Tools/Sigma/yml_scripts/Registry_Event_RunOnce_Persistence.yml), where the detection seeks to look for values on the map that start and end with various registry values while filtering out Google Chrome and Microsoft Edge entries that would raise false positive alerts.
-
-
