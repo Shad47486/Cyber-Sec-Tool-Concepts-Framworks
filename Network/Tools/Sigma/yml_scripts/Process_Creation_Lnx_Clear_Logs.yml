@@ -1,0 +1,9 @@
+detection:
+  selection:
+    Image|endswith:
+         - '/rm' # covers /rmdir as well
+         - '/shred'
+    CommandLine|contains:
+         - '/var/log'
+         - '/var/spool/mail'
+  condition: selection

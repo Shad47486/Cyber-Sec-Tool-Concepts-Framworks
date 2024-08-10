@@ -1,0 +1,9 @@
+detection:
+  tools:
+         - 'scp'
+         - 'rsync'
+         - 'sftp'
+  filter:
+         - '@'
+         - ':'
+  condition: tools and filter

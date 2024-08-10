@@ -1,0 +1,7 @@
+Posh_PC_Powercat.yml
+detection:
+  selection:
+    HostApplication|contains:
+         - 'powercat'
+         - 'powercat.ps1'
+  condition: selection 

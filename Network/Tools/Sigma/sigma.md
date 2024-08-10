@@ -2,8 +2,9 @@
 
 * Open-source generic signature language developed by Florian Roth & Thomas Patzke to describe log events in a structured format.
   * Allows for quick sharing of detection methods by security analysts.
-  * For log files as Snort is for network traffic, and Yara is for files.
+  * Sigam is for log files as Snort is for network traffic, and Yara is for files.
     * [Sigma Github Repo](<https://github.com/SigmaHQ/sigma>)
+    * [Sigma Cheatsheet](/Network/Tools/Sigma/Sigmacheatsheet.pdf)
 
 * Sigma was developed to satisfy the following uses:
   * To make detection methods and signatures shareable alongside IOCs and Yara rules.
@@ -27,6 +28,8 @@
 ## Sigma Syntax
 
 * [Sigma Template](/Network/Tools/Sigma/sigma_rule_template.yml)
+* [Sigma Synetax Tree](/examples/sigma_syntex.png)
+* [Examples used to describe Sigma Syntax](/Network/Tools/Sigma/yml_scripts/WMI_Event_Subscription.yml)
 
 * Title: Names the rule based on what it is supposed to detect. This should be short and clear.
 
@@ -73,5 +76,45 @@
 
 * Tags: Adds information that may be used to categorise the rule.
   * Tags may include values for CVE numbers and tactics and techniques from the MITRE ATT&CK framework.
+
+### Search Identifiers and Condition Expressions
+
+* [Sigma Synetax Tree](/examples/sigma_syntex.png)
+
+* The definition of the search identifiers can comprise two data structures - lists and maps - which dictate the order in which the detection would be processed.
+
+* Lists - They will be presented using strings linked with a logical 'OR' operation.
+  * Mainly, they will be listed using hyphens (-)
+    * [Example used for this](/Network/Tools/Sigma/yml_scripts/Posh_PC_Powercat.yml).
+
+* Maps comprise key/value pairs where the key matches up to a field in the log data while the value presented is a string or numeral value to be searched for within the log.
+  * Maps follow a logical 'AND' operation.
+  * EX: [Example used for this](/Network/Tools/Sigma/yml_scripts/Process_Creation_Lnx_Clear_Logs.yml)
+    * In this example, We can look at the Clear Linux log rule where the selection term forms the map, and the rule intends to match on Image|endswith either of the values listed, AND CommandLine contains either value listed.
+      * This example shows how maps and lists can be used together when developing detections.
+        * It should be noted that endswith and contains are value modifiers, and 2 lists are used for the search values, where one of each group has to match for the rule to initiate an alert.
+
+* 2 types of value modifiers (|):
+  * Transformation modifiers: These change the values provided into different values and can modify the logical operations between values. They include:
+    * contains: The value would be matched anywhere in the field.
+    * all: This changes the OR operation of lists into an AND operation.
+      * This means that the search conditions has to match all listed values.
+    * base64: This looks at values encoded with Base64.
+    * endswith: With this modifier, the value is expected to be at the end of the field.
+      * EX: this is representative of *\cmd.exe.
+    * startswith: This modifier will match the value at the beginning of the field.
+      * EX: power*.
+  * Type modifiers: These change the type of the value or sometimes even the value itself.
+    * Currently, the only usable type modifier is re, which is supported by Elasticsearch queries to handle the value as a regular expression.
+
+* For conditions, this is based on the names set for your detections, such as selection and filter, and will determine the specification of the rule based on a selected expression.
+  * Some of the terms supported include:
+    * ogical AND/OR
+    * 1/all of search-identifier
+    * 1/all of them
+    * not
+
+* EX: Conditional values can be seen in the extract [here](/Network/Tools/Sigma/yml_scripts/Remote_File_Copy.yml) from the Remote File Copy rule,  where the detection seeks to look for either of the tools: scp, rsync or sftp and with either filter values @ or :
+  * EX2: Showcase a combination of the conditional expressions can be seen [here](/Network/Tools/Sigma/yml_scripts/Registry_Event_RunOnce_Persistence.yml), where the detection seeks to look for values on the map that start and end with various registry values while filtering out Google Chrome and Microsoft Edge entries that would raise false positive alerts.
 
 
