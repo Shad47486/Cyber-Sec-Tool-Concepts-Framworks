@@ -11,7 +11,7 @@
       - Elasticsearch acts as a db used to search & analyze the data.
         - Kibana is responsible for displaying and visualizing the data stored in elasticsearch.
           - Data stored in elasticseach can easily be shaped into different visualizations, time charts, infographics, etc., using Kibana.
-- [For more information on Elasticsearch](</SIEM/ELK/overview/elasticsearch.md>)
+- [Elasticsearch Deeper Dive](</SIEM/ELK/overview/elasticsearch.md>)
 
 ## Elastic Seach (Elasticseach)
 
@@ -30,7 +30,7 @@
     - 'Output' part is where the user wants the filtered data to send.
       - Can be a listening port, Kibana Interface, elasticsearch database, a file, etc.
         - [Supported Output Plugins Doc](<https://www.elastic.co/guide/en/logstash/8.1/output-plugins.html>)
-- [For more information on Logstash](</SIEM/ELK/overview/logstash.md>)
+- [Logstash Deeper Dive](</SIEM/ELK/overview/logstash.md>)
 
 ## Beats
 
@@ -56,7 +56,7 @@
 
 - Web-based data visualization that works with elasticsearch to analyze, investigate and visualize the data stream in real-time.
   - Allows Users to create multiple visualizations and dashboards for better visibility
-- [For more information on Kibana](</SIEM/ELK/overview/kibana.md>)
+- [Kibana Deeper Dive](</SIEM/ELK/overview/kibana.md>)
 
 ### What to install in what order?
 

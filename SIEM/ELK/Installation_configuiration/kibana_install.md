@@ -35,5 +35,5 @@
   * It will show a randomly generated token. Enter the token in the space and press Enter.
     * It will ask for the elastic credentials.
       * There are the same credentials that were generated during the installation of Elasticsearch:
-        * [elasticsearch example of what to look for](</examples/elasticsearchexample.md>)
+        * [elasticsearch example of what to look for](</SIEM/ELK/configurationandexamples/elasticsearchexample.md>)
   * Next, it will ask for the verification code, which can be obtained by running this command /usr/share/kibana/bin/kibana-verification-code
