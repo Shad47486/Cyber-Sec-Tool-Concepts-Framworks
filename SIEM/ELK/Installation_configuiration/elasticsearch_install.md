@@ -8,13 +8,16 @@
 1. Run the following command dpkg -i elasticsearch.deb as a root user to install Elasticsearch on your machine
    1. Make sure to change the user to root using the command sudo su
 
-2. When installing for the first time, security configuration will be displayed, including the default password for the elastic user; note this down as it will be used later.
+2. When installing for the first time, security configuration will be displayed, including the default password for the elastic user;
+   1. *note this down as it will be used later.*
+      1. [Example of what it will look like](/examples/elasticsearchexample.md)
    2. If all goes well, Elasticsearch will be installed on the host.
 
 3. The following commands will be used to make the Elasticsearch service persistent so that it gets started whenever the server restarts.
-   3. systemctl enable elasticsearch.service
-   4. systemctl start elasticsearch.service
-   5. To check Status: systemctl status elasticsearch.service
+   1. systemctl enable elasticsearch.service
+      1. May need to choose user
+   2. systemctl start elasticsearch.service
+   3. To check Status: systemctl status elasticsearch.service
 
 ### How to configure Elastic Search?
 
