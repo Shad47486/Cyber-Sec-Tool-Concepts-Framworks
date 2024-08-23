@@ -11,4 +11,3 @@
       * When we send our email message, we issue the command data and type our message.
       * We issue <CR><LF>.<CR><LF> (or Enter . Enter to put it in simpler terms).
         * *The SMTP server now queues the message.*
-

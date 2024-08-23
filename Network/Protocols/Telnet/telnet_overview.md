@@ -15,4 +15,4 @@
     * Making it easy to find the username and password
 
 * Solution?
-  * SSH
+  * Using Secure Shell Host (SSH)
