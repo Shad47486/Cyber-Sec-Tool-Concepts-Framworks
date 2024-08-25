@@ -1,12 +1,14 @@
 # What is Wazuh?
 
 - Open-source, freely available & extensive EDR solution.
+  - This system uses rules to search for potential security threats or issues in logs from various sources, such as operating system logs, application logs, endpoint security logs, etc.
 - Uses Management & Agent deployment
   - Manger is responsible for managing agents installed on the devices you'd like to monitor.
   - Agents monitor the processes & events that take place on the device, such as authentication and user management.
     - Agents will offload these logs to a designated collector for processing, such as Wazuh.
 - Capable of auditing & monitoring on agent's configuration whilst proavtively recording event logs.
   - Audting Metrics Based on NIST, MITRE, GDPR
+- Can work on top of the ELK stack
 
 ## Setting up/Features/Commands
 
@@ -30,3 +32,7 @@
 
 - 'audit' rules are located in:
   - /etc/audit/rules.d/audit.rules
+
+### How to setup Wazuh
+
+* 
