@@ -25,7 +25,7 @@
     * patterns/: This directory stores custom patterns that can be used in Logstash’s grok filter.
       * Grok is a powerful pattern-matching and extraction tool in Logstash, and you can define your own patterns in separate files within this directory.
     * startup.options: On some systems, you may find this file which contains additional options and arguments that can be passed to Logstash during startup.
-*End of Files*
+*End of files to be considerate of*
 
 * Let’s open the logstash.yml using the command nano logstash.yml and go to the Pipeline Configuration Settings section:
   * There are two updates that we need to make.

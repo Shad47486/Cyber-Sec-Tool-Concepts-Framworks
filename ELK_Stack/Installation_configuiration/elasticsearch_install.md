@@ -10,7 +10,7 @@
 
 2. When installing for the first time, security configuration will be displayed, including the default password for the elastic user;
    1. *note this down as it will be used later.*
-      1. [Example of what it will look like](</SIEM/ELK/configurationandexamples/elasticsearchexample.md>)
+      1. [Example of what it will look like](</ELK/configurationandexamples/elasticsearchexample.md>)
    2. If all goes well, Elasticsearch will be installed on the host.
 
 3. The following commands will be used to make the Elasticsearch service persistent so that it gets started whenever the server restarts.
