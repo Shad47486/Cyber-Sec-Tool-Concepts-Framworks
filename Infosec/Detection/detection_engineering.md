@@ -184,4 +184,3 @@
     * To assess detection maturity against monitored threat actors.
     * To assess the maturity of security vendors and products in use.
     * To provide context to analysts by including the DML levels in Yara rules, Snort signatures and SIEM correlation rules.
-
