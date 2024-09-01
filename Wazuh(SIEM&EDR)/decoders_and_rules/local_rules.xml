@@ -1,0 +1,8 @@
+<group name="audit,">
+   <rule id="100002" level="3"> 
+        <if_sid>80790</if_sid> 
+        <field name="audit.cwd">downloads|tmp|temp</field> 
+        <description>Audit: $(audit.exe) created a file with filename $(audit.file.name) the folder $(audit.directory.name).</description> 
+        <group>audit_watch_write,</group> 
+    </rule>
+</group>

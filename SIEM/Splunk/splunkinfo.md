@@ -57,26 +57,16 @@
         - This sidebar has two sections showing selected fields and interesting fields.
           - Also provides quick results, such as top values and raw values against each field.
 
-### Log Sources for investigations that could be helpful
+### Data Manipulation
 
-- wineventlog
-  - Contains Windows Event logs
-- winRegistry
-  - Contains the logs related to registry creation / modification / deletion etc.
-- XmlWinEventLog
-  - Contains the sysmon event logs. It is a very important log source from an investigation point of view.
-- fortigate_utm
-  - Contains Fortinet Firewall logs
-- iis
-  - contains IIS web server logs
-- Nessus:scan
-  - Contains the results from the Nessus vulnerability scanner.
-- Suricata
-  - Contains the details of the alerts from the Suricata IDS.
-    - This log source shows which alert was triggered and what caused the alert to get triggered— a very important log source for the Investigation.
-- stream:http
-  - Contains the network flow related to http traffic.
-- stream: DNS
-  - Contains the network flow related to DNS traffic.
-- stream:icmp
-  - Contains the network flow related to icmp traffic.
+- Splunk needs to be properly configured to parse and transform the logs appropriately.
+  - Some of the issues being highlighted are:
+    - Event Breaking:
+      - Configure Splunk to break the events properly.
+    - Multi-line Events:
+      - Configure Splunk to configure multi-line events properly.
+    - Masking:
+      - Some logs contain sensitive data.
+        - To comply with the PCI DSS standard, info like credit card numbers must be masked to avoid any violation.
+    - Extracting custom fields:
+      - In the weblogs, some fields are redundant and need to be removed.

@@ -1,0 +1,10 @@
+User: Emily Davis, Server: Server C, Action: DISCONNECT
+User: John Doe, Server: Server B, Action: DISCONNECT
+User: Bob Johnson, Server: Server B, Action: DISCONNECT
+User: Emily Davis, Server: Server D, Action: CONNECT
+User: Alice Smith, Server: Server D, Action: CONNECT
+User: Alice Smith, Server: Server A, Action: DISCONNECT
+User: Bob Johnson, Server: Server C, Action: DISCONNECT
+User: John Doe, Server: Server D, Action: DISCONNECT
+User: John Doe, Server: Server B, Action: DISCONNECT
+User: Michael Brown, Server: Server E, Action: CONNECT
