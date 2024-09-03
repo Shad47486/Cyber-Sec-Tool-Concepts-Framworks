@@ -79,3 +79,17 @@
   * @timestamp<"yyyy-MM-ddTHH:mm:ssZ"
   * The time is optional, so you can also do the following:
     * @timestamp>yyyy-MM-dd
+
+###### Fuzzy Searches
+
+* Fuzzy searching is beneficial when searching for documents with inconsistencies or typos in the data.
+  * It accounts for these variations and retrieves relevant documents by allowing a specified number of character differences (known as the fuzziness value) between the search term and the actual field value.
+
+* EX: If you want to search for "server", you can use a fuzzy search to return docs containing "serber", "server01", and "server001"
+  * To search for all documents where the "host_name" field is similar, but not necessarily identical to "serber", you can use the following query:
+    * host_name:server01~1
+      * As you can see, the "~" character indicates that we are doing a fuzzy search. The format of the query is as follows:
+        * field_name:search_term~fuzziness_value
+      * The fuzziness value lets us control how many characters differ from the search term
+        * Fuzzy searching does not work on nested data and only matches on one-word strings.
+
