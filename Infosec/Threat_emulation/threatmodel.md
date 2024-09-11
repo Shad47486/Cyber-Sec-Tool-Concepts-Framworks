@@ -50,6 +50,6 @@
 
 * There are various methods to perform threat modelling.
   * Not all the methods have the same purpose; some focus on risk or privacy concerns, while some are more customer-focused
-    * [Spoofing, Tampering, Repudiation, Information Disclosure, Denial Of Service, and Elevation/Escalation of Privilege (STRIDE)](/Infosec/Frameworks/STRIDE.md)
-    * [Damage Potential, Reproducibility, Exploitability, Affected Users and Discoverability (DREAD)](/Infosec/Frameworks/DREAD.md)
-    * [Process for Attack Simulation and Threat Analysis(PASTA)](/Infosec/Frameworks/PASTA.md)
+    * [Spoofing, Tampering, Repudiation, Information Disclosure, Denial Of Service, and Elevation/Escalation of Privilege (STRIDE)](/Infosec/GRC/Frameworks/STRIDE.md)
+    * [Damage Potential, Reproducibility, Exploitability, Affected Users and Discoverability (DREAD)](/Infosec/GRC/Frameworks/DREAD.md)
+    * [Process for Attack Simulation and Threat Analysis(PASTA)](/Infosec/GRC/Frameworks/PASTA.md)

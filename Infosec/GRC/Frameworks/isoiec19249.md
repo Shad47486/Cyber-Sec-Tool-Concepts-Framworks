@@ -6,7 +6,7 @@
 
 * ISO 28000 talks about supply chain security.
 
-## List of 5 Architectural Principles:*
+## List of 5 Architectural Principles:
 
 1. Domain Separation:
    1. Every set of related components is grouped as a single entity; components can be applications, data, or other resources.
@@ -68,5 +68,3 @@
       5. This principle teaches that the systems should be designed to fail safe.
          5. EX: If a firewall crashes, it should block all traffic instead of allowing all traffic.
             5. Moreover, we should be careful that error messages don’t leak information that we consider confidential, such as dumping memory content that contains information related to other customers.
-
-#### What 
