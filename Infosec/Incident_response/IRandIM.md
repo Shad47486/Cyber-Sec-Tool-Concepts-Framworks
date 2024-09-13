@@ -17,6 +17,12 @@
         * The SIEM system could alert on a custom rule that was created by the analysts.
           * EX: an impossible travel rule where a user's account is being logged in from two different countries simultaneously.
 
+* *Setting up an incident response capability requires orgs to make several decisions, including having a specific definition for the term "incident" to fit a clear scope.*
+  * Therefore, we can differentiate events and incidents as the following:
+    * Event: This is an observed occurrence within a system or network.
+      * It ranges from a user connecting to a file server, a user sending emails, or anti-malware software blocking an infection.
+    * Incident: This is a violation of security policies or practices by an adversary to negatively affect the org through actions such as exfiltrating data, encrypting through ransomware, or causing a denial of services.
+
 ## What is the Incident Management (IM)?
 
 * IM covers the process aspect of dealing with an incident.
@@ -57,7 +63,7 @@
   * The CMT would usually consist of several key business stakeholders such as the entire executive suite, members from the legal and communication teams, as well as other external parties, such as the regulator or police.
     * ALL HANDS ARE ON DECK.
   * At this level, we start to move into the territory of what is called "nuclear" actions.
-    * Rather than simple actions to contain, eradicate, and recover, this team can authorise the use of nuclear actions, such as taking the entire organisation offline to limit the incident's damage.
+    * Rather than simple actions to contain, eradicate, and recover, this team can authorise the use of nuclear actions, such as taking the entire org offline to limit the incident's damage.
 
 ### Process of IM based on NIST Special Publication 800-61 Standards
 
@@ -67,16 +73,40 @@
 4. Eradication
 5. Recovery
 6. Post-incident Activity
-   * [More info on NISTIM](<https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf>)  
+   * [More info on NISTIM](<https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf>)
+
+### Process of IR
+
+* The notable IR process consists of the following phases:
+  * [Preparation](/Infosec/Incident_response/preperation.md)
+    * Ensures that the org can effectively react to a breach with laid down procedures.
+  * [Identification](/Infosec/Incident_response/identification.md)
+    * Operational deviations must be noted and determined to cause adverse effects.
+  * [Analysis or Scoping](/Infosec/Incident_response/anaylsis.md)
+    * The org determines the extent of a security incident, including identifying the affected systems, the type of data at risk, and the potential impact on the org.
+  * [Containment](/Infosec/Incident_response/containment.md)
+    * Damage limitation is paramount, therefore, isolating affected systems and preserving forensic evidence is required.
+  * [Eradication](/Infosec/Incident_response/eradication_remediation.md)
+    * Adversarial artefacts and techniques will be removed, restoring affected systems.
+  * [Recovery and Lessons Learned](/Infosec/Incident_response/lesson_learned.md)
+    * Business ops are to resume fully after removing all threats and restoring systems to full function.
+      * Additionally, the org considers the experience, updates its response capabilities, and conducts updated training based on the incident.
+
+* *An incident response plan (IRP) is a document that outlines the steps an org will take to respond to an incident.*
+  * The IRP should be the org's Swiss Army knife, comprehensively covering all aspects of the incident response process, roles and responsibilities, communication channels between stakeholders, and metrics to capture the effectiveness of the IR process.
+  * To have an effective incident response plan, you would have gone through numerous iteration processes via creating templates and refactoring the process.
+    * This ensures that you can ingest incident data and mitigate breaches as they occur accurately. The templates would also be valuable in creating incident reports.
+  * Accompanying an incident response plan is the use of playbooks.
+    * The playbooks would provide the org with actions and procedures to identify, contain, eradicate, recover and track successful incident mitigation measures.
 
 #### What are common Pitfalls during an incident?
 
 * Insufficient Hardening
   * Typically implemented BEFORE AN INCIDENT or AFTER AN INCIDENT
-    * Results in an increased amount of incidents and while most can be stopped before there is actual damage, it only takes one successful incident to be very costly for an organisation
+    * Results in an increased amount of incidents and while most can be stopped before there is actual damage, it only takes one successful incident to be very costly for an org
 
 * Insufficient Logging
-  * Often it is seen that organisations are not performing adequate logging of information (AKA 'Flying Blind')
+  * Often it is seen that orgs are not performing adequate logging of information (AKA 'Flying Blind')
     * A common problem is the cost of ingesting log information
       * Results in some incidents only being detected later when there is already an impact or it may not be possible to accurately determine the incident scope.
 
