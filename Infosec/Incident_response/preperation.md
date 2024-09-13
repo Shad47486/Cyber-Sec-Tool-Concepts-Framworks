@@ -1,4 +1,4 @@
-# What is the preperation phase of a incident response?
+# What is the preperation phase of a IR?
 
 * The preparation phase of a IR is to ensures that the org can effectively react to a breach with laid down procedures.
   * Numerous elements should be covered during the Preparation phase, including:
@@ -14,8 +14,8 @@
     * Therefore, preparing your team effectively to recognise and address incidents before, during, and after is essential.
 
 * Creation of CSIRT Teams
-  * You must create a cyber security incident response team (CSIRT) that includes business, technical, legal counsel, and public relations experts with relevant skills and authority to act upon decisions during a cyber attack.
-  * Following the team's creation, the members will require appropriate permissions under a well-established access control policy. 
+  * You must create a cyber security IR team (CSIRT) that includes business, technical, legal counsel, and public relations experts with relevant skills and authority to act upon decisions during a cyber attack.
+  * Following the team's creation, the members will require appropriate permissions under a well-established access control policy.
     * This access must be well organised and controlled, with proper notifications to system administrators when the CSIRT uses privileged access.
 
 * Training & Assessment Sessions
@@ -55,8 +55,8 @@
 #### Preparing The Technology
 
 * The people and policies set up by the CSIRT would require the backing of tools and solutions to protect and defend their org's technological infrastructure.
-  * Any incident response operation involves the org of devices, systems, and technologies that will facilitate the prevention, detection, and mitigation of any occurrence.
-    * As a result, knowing your technical infrastructure is essential to the incident response process.
+  * Any IR operation involves the org of devices, systems, and technologies that will facilitate the prevention, detection, and mitigation of any occurrence.
+    * As a result, knowing your technical infrastructure is essential to the IR process.
 
 * Asset Inventory Classification
   * It is crucial to identify high-value assets within the org, together with their technical composition.
@@ -70,7 +70,7 @@
       * Asset IP address: (EX: 192.168.0.2 or even a subnet range 192.168.0.0/16)
 
 * Technical Instrumentation
-  * Once the inventory has been identified, this should be followed up with telemetry about the network infrastructure, which is essential for incident response.
+  * Once the inventory has been identified, this should be followed up with telemetry about the network infrastructure, which is essential for IR.
     * This means mapping every network device, cloud platform, system, and application.
       * Having this infrastructural picture simplifies the implementation of system and sensor-based detection mechanisms
         * These mechanisms include anti-malware, endpoint detection and response (EDR) tools, data loss prevention (DLP), intrusion detection and prevention systems (IDPS), and log collection capabilities.
@@ -82,14 +82,14 @@
   * To conduct any investigations during an attack or breach, incident responders must ensure they can validate executing scripts and installers on all endpoints and hosts within their network and implement technical capabilities to facilitate attack containment, analysis, and replication.
     * There should be means of collecting forensic evidence using disk and memory imaging tools, secure storage only accessible to the CSIRT, and analysis tools such as sandboxes.
       * Accompanying these efforts should be an incident-handling *jump bag*.
-        * This bag contains all the necessary tools for incident response.
+        * This bag contains all the necessary tools for IR.
         * Each kit will be unique; however, as an incident responder, the following items are worth having in your arsenal:
           * Media drives to store evidence being collected.
           * Disk imaging and host forensic software such as FTK Imager, EnCase, and The Sleuth Kit.
           * Network tap to mirror and monitor traffic.
           * Cables and adapters such as USB, SATA, and card readers to accommodate common scenarios.
           * PC repair kits that include screwdriver sets and tweezers.
-          * Copies of incident response forms and communication playbooks.
+          * Copies of IR forms and communication playbooks.
 
 ##### What does visibility entail?
 
@@ -108,9 +108,9 @@
     * Ensures that systems are patched up regularly.
 
 * Every computing device within an org's network can generate and store logs.
-  * The challenge of aggregating the logs is addressed by using SIEM solutions, which provide a central storage and analysis platform. 
+  * The challenge of aggregating the logs is addressed by using SIEM solutions, which provide a central storage and analysis platform.
     * Logs must be secured from any modification once recorded.
-    * Additionally, as a CSIRT team member, you should be aware that the collection of logs enables the other stages of the incident response process to run as smoothly as possible.
+    * Additionally, as a CSIRT team member, you should be aware that the collection of logs enables the other stages of the IR process to run as smoothly as possible.
 
 * Common types of log entries to enable and monitor include:
   * Event: These logs record information about a system or network occurrence, such as login attempts, application events and network traffic.
