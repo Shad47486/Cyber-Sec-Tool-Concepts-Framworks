@@ -86,7 +86,7 @@
     * This will be a process creation alert.
   * EX: Suspicious network communication: Running a suspicious DNS beaconing request will result in a critical rule being triggered.
 
-###### Aurora Detection Gaps
+##### Aurora Detection Gaps
 
 * Since Aurora uses ETW to observe and monitor Windows system events, there are some sections where ETW events aren’t available or not easily usable.
   * These areas cover Aurora's detection gaps, and we shall look at them in this task.
