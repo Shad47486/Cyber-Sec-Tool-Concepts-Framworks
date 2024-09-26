@@ -115,14 +115,3 @@
   * Solution:
     * Aurora’s full version uses the ETW Canary module to detect any manipulations of ETW.
     * Using the flag --report-stats allows for reporting the agent’s status to your SIEM and will include stats of the observed, processed and dropped events that can indicate signs of manipulations.
-
-
-
-
-
-
-
-
-
-
-
