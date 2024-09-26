@@ -65,7 +65,7 @@
       * Dump: Used to create a dump file found in the dump-path folder.
   * Custom Responses
     * Custom responses are meant to call an internal program to execute a function based on a raised alert.
-    * The program has to be available from PATH and the answer would be a command-line query.
+      * The program has to be available from PATH and the answer would be a command-line query.
       * With these responses, a set of flags can be used to modify and relay different types of information.
     * The flags have been summarised in the table below:
       * Simulate - Used to test out rules, and responses that won't be triggered.
