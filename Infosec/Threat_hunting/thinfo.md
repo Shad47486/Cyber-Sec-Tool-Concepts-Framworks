@@ -26,7 +26,7 @@
     * Not many organisations have the kind of intrusion experience that would allow them to study and develop usable intelligence from said intrusion and even fewer have the capability of developing it internally.
     * EXs being IOCs specifically documented on previous intrusions would be the most obvious and straightforward example for this one
 
-## Threat Hunting Process
+### Threat Hunting Process
 
 * What do we hunt for?
   * The answer to this question dictates the direction of the hunt.

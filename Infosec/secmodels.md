@@ -26,7 +26,7 @@
 
 ## What is the Biba Model?
 
-* aims to achieve integrity by specifying two main rules:
+* Aims to achieve integrity by specifying two main rules:
   * Simple Integrity Property:
     * This property is referred to as “no read down”; a higher integrity subject should not read from a lower integrity object.
   * Star Integrity Property:

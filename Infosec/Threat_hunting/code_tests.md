@@ -17,7 +17,7 @@
     * SCA is now an essential pillar in security testing as modern applications are increasingly composed of open-source code.
       * Nowadays, one of the biggest challenges developer teams have is ensuring their codebase is secure as applications are assembled from different building blocks.
 
-## # What is Dynamic Application Security Testing (DAST)?
+## What is Dynamic Application Security Testing (DAST)?
 
 * Black-box (UNKNOWN) testing method that finds vulnerabilities at runtime
   * Tool to scan any web application to find security vulnerabilities.
